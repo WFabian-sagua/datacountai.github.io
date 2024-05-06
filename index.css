@@ -228,7 +228,7 @@ footer .container{
         padding-right: 20px;
     }
 
-    #hero h1{
+    #banner h1{
         font-size: 5em;
     }
 
@@ -501,4 +501,36 @@ header nav a:last-child button {
 .Demo-Dashboard button {
     font-size: 1em; /* Tamaño de fuente del botón */
     padding: 10px 20px; /* Espaciado interno del botón */
+}
+
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Color de fondo de WhatsApp */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px; /* Centra verticalmente el contenido */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+    animation: palpitar 1s infinite alternate; /* Efecto de palpitar */
+}
+
+.boton-flotante img {
+    width: 50px; /* Ajusta el tamaño del icono */
+    height: 50px; /* Ajusta el tamaño del icono */
+    vertical-align: middle; /* Alinea verticalmente el icono */
+    animation: palpitar 1s infinite alternate; /* Efecto de palpitar */
+}
+
+/* Animación de palpitar */
+@keyframes palpitar {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }
