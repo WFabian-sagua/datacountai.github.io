@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>Data Count Ai</title>
     <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <img src="media/Logo.png" class="logo">
-            <nav style="text-align: right;"> <!-- Alinea los enlaces a la derecha -->
+            <nav style="text-align: right;">
                 <a href="#banner" style="margin-right: 20px";>INICO</a>
                 <a href="#somos-datacount" style="margin-right: 20px";>QUIENES SOMOS</a>
                 <a href="#nuestros-servicios" style="margin-right: 20px";>SERVICIOS</a>
-                <a href="#Blog">BLOG</a>
+                <a href="#blog">BLOG</a>
             </nav>
             <div class="social-buttons">
                 <a href="mailto:datacountai@proton.me" class="social-icon" title="Email">
@@ -41,7 +42,7 @@
 
     <section id="banner">
         <h1>Prueba nuestro<br>Dashboard Dinámico</h1>
-		<a href="https://bf736c5c-9720-41de-a6cd-3f34d7b1555f-00-ztiorzny2qvk.spock.replit.dev/" target="_blank" rel="noopener">
+		<a href="https://app.powerbi.com/view?r=eyJrIjoiMjA3NTZmOWUtMTA3Mi00NTljLWIwMjEtZjJjMTZkNTg1YzQwIiwidCI6IjBhM2M2YTBlLTllNmItNDg2Ny04YjkzLTM0NzAyNTE1YTdkYiIsImMiOjR9" target="_blank" rel="noopener">
 		    <button>DASHBOARD DEMO</button>
 		</a>
     </section>
@@ -88,127 +89,68 @@
         </div>
     </section>
 
-<section id="Blog">
+<section id="blog">
     <div class="container">
         <h2>Blog</h2>
-        <div class="Blog">
-            <div class="Excel-to-SQLite">
-                <h3>Excel to SQLite: Importación de Datos con Python</h3>
-                <p>En el mundo de la gestión de datos, la capacidad de importar datos de diferentes fuentes es fundamental. En este breve artículo, exploraremos cómo importar datos de Excel a una base de datos SQLite utilizando Python.</p>
-                <div class="code-block">
-                    <pre><code class="python">
-# Carga de Datos desde Excel a SQLite
-# Nombre: Fabian Sagua
-# Correo electrónico: datacountai@proton.me
-# Compañía: DATA COUNT AI
-
-import os
-import pandas as pd
-import sqlite3
-
-# Nombre del archivo Excel
-excel_filename = 'tbl_bnk.xlsx'
-
-# Rutas para los archivos y carpetas
-excel_file_path = excel_filename
-db_folder_path = 'db'
-db_file_path = os.path.join(db_folder_path, 'datos_bnk.db')
-
-# Crear la carpeta si no existe
-os.makedirs(db_folder_path, exist_ok=True)
-
-# Cargar los datos desde el archivo Excel
-df = pd.read_excel(excel_file_path, sheet_name='bnk')
-
-# Conectar a la base de datos SQLite
-conn = sqlite3.connect(db_file_path)
-cursor = conn.cursor()
-
-# Crear la tabla si no existe
-create_table_query = '''
-CREATE TABLE IF NOT EXISTS bnk_data (
-    mayor TEXT,
-    mayor_nombre TEXT,
-    subcta TEXT,
-    subcta_nombre TEXT,
-    expediente TEXT,
-    periodo TEXT,
-    mes TEXT,
-    doc_tipo INTEGER,
-    doc_numero TEXT,
-    fecha TEXT,
-    meta_nombre TEXT,
-    importe REAL
-);
-'''
-cursor.execute(create_table_query)
-
-# Insertar los datos en la tabla
-insert_query = '''
-INSERT INTO bnk_data VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-'''
-
-for _, row in df.iterrows():
-    values = (
-        row['mayor'], row['mayor_nombre'], row['subcta'], row['subcta_nombre'],
-        row['expediente'], row['periodo'], row['mes'], row['doc_tipo'],
-        row['doc_numero'], row['fecha'], row['meta_nombre'], row['importe']
-    )
-    cursor.execute(insert_query, values)
-
-# Guardar los cambios y cerrar la conexión
-conn.commit()
-conn.close()
-
-print("Datos insertados correctamente en la base de datos SQLite.")
-                    </code></pre>
+		<div class="blog-container">
+            <div class="blog-card">
+                <h3>Presentación: innovación Gubernamental en Acción</h3>
+                <div class="dashboard-preview">
+                    <img src="media/Gub.png" alt="Dashboard Preview" class="dashboard-image">
+                    <p>Descripción</p>
                 </div>
-                <!--<button>Leer Más</button>-->
+                <p>Descubre cómo la innovación gubernamental transforma la administración pública con la aplicación de Ciencia de Datos.</p>
+                <a href="presentacion.html" class="preview-button">Visualizar</a>
             </div>
-            <div class="Demo-Dashboard">
-                <h3>Demo Dashboard: Visualización Interactiva de Datos</h3>
-                <p>¡Explora nuestro demo de dashboard interactivo! Esta herramienta te permite visualizar datos clave de manera dinámica y fácil de entender. Descubre insights valiosos para tu negocio.</p>
-                <!-- Aquí puedes agregar un botón para acceder al demo -->
-                <!--<button>Ver Demo</button>-->
+			<div class="blog-card">
+                <h3>DASHBOARD: Indicadores de  Seguimiento de la Ejecución Presupuestal</h3>
+                <div class="dashboard-preview">
+                    <img src="media/dashboard_pptal.png" alt="Dashboard Preview" class="dashboard-image">
+                    <p>Descripción</p>
+                </div>
+                <p>Explora nuestro dashboard interactivo diseñado para analizar y monitorear los indicadores clave de la ejecución presupuestal.</p>
+                <a href="dashboard_pptal_demo.html" class="preview-button">Visualizar</a>
             </div>
-            <div class="Soporte-SIAF">
-                <h3>Soporte SIAF: Herramientas y Recursos Útiles</h3>
-                <p>El Sistema Integrado de Administración Financiera (SIAF) es una herramienta esencial para la gestión financiera en entidades del sector público. En esta sección, compartiremos recursos útiles y herramientas para mejorar tu experiencia con el SIAF.</p>
-                <h4>Recursos Destacados:</h4>
-                <ul>
-                    <li><a href="https://siafperu.gob.pe/" target="_blank" rel="noopener">SIAF Perú</a>: Sitio oficial del SIAF Perú donde puedes encontrar información, manuales y normativa relacionada.</li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLABlUN8vRnB79iP5KuD82jxqHCFUH8YWF" target="_blank" rel="noopener">Canal de YouTube del MEF Perú</a>: Ofrece tutoriales y videos instructivos sobre el uso del SIAF.</li>
-                    <li><a href="https://www.mef.gob.pe/es/siaf" target="_blank" rel="noopener">Portal del Ministerio de Economía y Finanzas</a>: Aquí encontrarás información actualizada sobre el SIAF y otros temas financieros.</li>
-                </ul>
-                <p>Estos recursos te ayudarán a comprender mejor el funcionamiento del SIAF y a resolver tus dudas de manera eficiente.</p>
-                    <!-- Aquí puedes agregar un botón para obtener más información -->
-                <!--<button>Leer Más</button>-->
+            <div class="blog-card">
+                <h3>Gestión Patrimonial</h3>
+                <div class="dashboard-preview">
+                    <img src="media/dashboard_patrimonio.png" alt="Dashboard Preview" class="dashboard-image">
+                    <p>Descripción:</p>
+                </div>
+                <p>Sumérgete en nuestro dashboard de gestión patrimonial y aprende cómo mejorar la administración de activos públicos para una mayor eficiencia y transparencia.</p>
+                <a href="patrimonio.html" class="preview-button">Visualizar</a>
             </div>
-            <div class="Soporte-SIGA">
-                <h3>Soporte SIGA: Recursos y Asistencia para una Implementación Exitosa</h3>
-                <p>El Sistema Integrado de Gestión Administrativa (SIGA) es una herramienta crucial para la gestión administrativa en entidades del sector público. En esta sección, te ofrecemos recursos y asistencia para garantizar una implementación exitosa del SIGA en tu organización.</p>
-                <h4>Recursos Destacados:</h4>
-                <ul>
-                    <li><a href="https://www.sigadef.gob.pe/" target="_blank" rel="noopener">SIGADEF</a>: Plataforma oficial del SIGADEF que proporciona información, manuales y normativa relacionada con el SIGA.</li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLABlUN8vRnB5NerWxKd9D2ULNdBMukpCP" target="_blank" rel="noopener">Videos Instructivos del MEF Perú</a>: Esta playlist ofrece tutoriales detallados sobre el uso del SIGA y su implementación.</li>
-                    <li><a href="https://www.mef.gob.pe/es/siga" target="_blank" rel="noopener">Portal del Ministerio de Economía y Finanzas</a>: Encuentra información actualizada sobre el SIGA y otros temas administrativos relevantes.</li>
-                </ul>
-                <p>Estos recursos te proporcionarán la orientación necesaria para aprovechar al máximo el potencial del SIGA en tu organización, asegurando una gestión administrativa eficiente y transparente.</p>
-                    <!-- Aquí puedes agregar un botón para obtener más información -->
-				<!--<button>Leer Más</button>-->
-            </div>
-        </div>
-     </div>
+			<div class="blog-card">
+                <h3>Gestión Patrimonial</h3>
+                <div class="dashboard-preview">
+                    <img src="media/dash_inversion.png" alt="Dashboard Preview" class="dashboard-image">
+                    <p>Descripción:</p>
+                </div>
+                <p>Este dashboard proporciona un resumen de inversiones del Banco de Inversiones del Perú desde 2001 hasta abril de 2024. Versión demo para explorar datos de inversión pública peruana.</p>
+                <a href="patrimonio.html" class="preview-button">Visualizar</a>
+            </div>					
+        </div>		
+    </div>
 </section>
+
 
 <a href="https://api.whatsapp.com/send?phone=51931555720" class="boton-flotante">
     <img src="media/wsp.png" alt="WhatsApp">
 </a>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Data Count Ai 2024</p>
-        </div>
-    </footer>
+	<footer style="background-color: #1E1E1E; color: white; padding: 20px 0;">
+		<div class="container" style="display: flex; justify-content: flex-start; align-items: center;">
+			<img src="media/Logo-dca.png" alt="Data Count Ai" style="max-width: 180px; margin-right: 5px;">
+			<div>
+				<p style="margin: 0; font-size: 12px; line-height: 1; color: white;">
+					&copy; 2024 Data Count Ai. Todos los derechos reservados. <br>
+					<br>
+					Correo electrónico: <a href="mailto:datacountai@proton.me" style="color: white;">datacountai@proton.me</a> <br>
+					Teléfono: <a href="tel:+51931555720" style="color: white;">+51 931 555 720</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>
