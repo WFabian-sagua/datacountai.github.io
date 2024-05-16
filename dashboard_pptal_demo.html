@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Demo - Data Count Ai</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 200px;
+            display: block;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0;
+            font-size: 32px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-container {
+            width: 100%;
+            height: 600px; /* Ajusta la altura según necesites */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .dashboard-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-description p {
+            margin: 10px 0;
+        }
+
+        .dashboard-description a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .dashboard-description a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            /* Elimina margin: 0 auto; para que el botón no esté centrado */
+            display: block;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+		
+		.back-button-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="media/Logo.png" alt="Data Count Ai" class="logo">
+        <h1>Dashboard Demo: Seguimiento de Ejecución Presupuestal</h1>
+        <div class="dashboard-container">
+            <iframe title="Dashboard Demo - Data Count Ai" src="https://app.powerbi.com/view?r=eyJrIjoiMjA3NTZmOWUtMTA3Mi00NTljLWIwMjEtZjJjMTZkNTg1YzQwIiwidCI6IjBhM2M2YTBlLTllNmItNDg2Ny04YjkzLTM0NzAyNTE1YTdkYiIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+        <div class="dashboard-description">
+            <p>Nuestro dashboard representa un salto significativo en la eficiencia al automatizar la preparación de información para la reasignación del presupuesto y la entrega de reportes relevantes de forma automática a través de correos electrónicos y números de WhatsApp seleccionados por el cliente, para la toma de decisiones eficientes y oportunas.</p>
+			<p>Es importante resaltar que ofrecemos dos tipos de reportes: uno centrado en aspectos presupuestarios y otro enfocado en temas logisticos. Ambos son herramientas valiosas que proporcionan a los Directivos de la Entidad y al personal operativo información actualizada al instante, liberándolos para enfocarse en tareas que generan un valor añadido.</p>
+			<p>Nuestro servicio elimina la tediosa tarea de generar manualmente reportes del SIAF de manera tradicional, permitiendo al personal operativo dedicar su tiempo a actividades más estratégicas. Además, proporcionamos un valor agregado al brindar a los directivos acceso inmediato a la información sin tener que depender de largas esperas o de datos propensos a errores.</p>
+            <p>Además, nos enorgullece destacar que no nos limitamos al dashboard propuesto. Nuestra solución es altamente adaptable a las necesidades específicas de cada cliente. Ofrecemos un servicio de personalización completo, que incluye modificaciones en los reportes existentes, la creación de nuevos dashboards y reportes, y cualquier otra adaptación necesaria para satisfacer los requerimientos particulares de cada Entidad.</p>
+			<p>Con esta versión demo de reportes automatizados, ilustramos cómo nuestra solución puede ser implementada en cualquier entidad pública del Perú para una mejor toma de decisiones financieras y de gestión. Para obtener más información o solicitar una demostración personalizada, no dudes en contactarnos a través de <a href="mailto:datacountai@proton.me">datacountai@proton.me</a>.</p>
+			<p style="font-size: 14px; color: #ff7e05; margin-top: 20px; font-weight: bold;">¡Solicita tu demo gratuita ahora!</p>
+			<p style="font-size: 12px; color: #666; margin-top: 5px;">(Cupos limitados, se otorgarán según disponibilidad de recursos y capacidad de servidores)</p>
+        </div>
+        <div class="back-button-container">
+			<button class="back-button" onclick="window.history.back()">Regresar</button>
+		</div>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=51931555720" class="boton-flotante">
+        <img src="media/wsp.png" alt="WhatsApp">
+    </a>
+</body>
+	<footer style="background-color: #1E1E1E; color: white; padding: 20px 0;">
+		<div class="container" style="display: flex; justify-content: flex-start; align-items: center;">
+			<img src="media/Logo-dca.png" alt="Data Count Ai" style="max-width: 180px; margin-right: 5px;">
+			<div>
+				<p style="margin: 0; font-size: 12px; line-height: 1; color: white;">
+					&copy; 2024 Data Count Ai. Todos los derechos reservados. <br>
+					<br>
+					Correo electrónico: <a href="mailto:datacountai@proton.me" style="color: white;">datacountai@proton.me</a> <br>
+					Teléfono: <a href="tel:+51931555720" style="color: white;">+51 931 555 720</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+</html>
