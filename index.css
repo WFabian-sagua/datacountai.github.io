@@ -421,86 +421,92 @@ header nav a:last-child button {
     display: block;
     opacity: 1;
 }
-#Blog {
+
+#blog {
     padding: 50px 0;
+    background-color: #f8f9fa;
 }
 
-#Blog h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
+.blog-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Soporte para desplazamiento suave en dispositivos iOS */
 }
 
-.Blog {
-    display: block; /* Cambiar de flex a block */
+.blog-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
 }
 
-.Excel-to-SQLite,
-.Soporte-SIAF,
-.Soporte-SIGA {
-    width: 100%; /* Ocupar todo el ancho disponible */
-    margin-bottom: 30px; /* Agregar un margen inferior para separar las secciones */
+.blog-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.Excel-to-SQLite {
-    width: 30%; /* Ajusta el ancho según tu diseño */
-}
-
-.Excel-to-SQLite h3 {
-    font-size: 1.5em;
-}
-
-.Excel-to-SQLite p {
+.blog-card p {
     font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
 }
 
-.Excel-to-SQLite button {
-    font-size: 1em;
-    padding: 10px 20px;
-}
-.Excel-to-SQLite,
-.Soporte-SIAF,
-.Soporte-SIGA {
-    width: 100%; /* Ocupar todo el ancho disponible */
-    margin-bottom: 30px; /* Agregar un margen inferior para separar las secciones */
-}
-.code-block {
-    background-color: #272822; /* Color de fondo del bloque de código */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    overflow-x: auto; /* Habilita el desplazamiento horizontal si el contenido es demasiado ancho */
+.preview-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+	text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.code-block pre {
-    margin: 0; /* Elimina el margen predeterminado */
+.preview-button:hover {
+    background-color: #0056b3;
 }
 
-.code-block code {
-    color: #f8f8f2; /* Color del texto */
-    font-size: 14px; /* Tamaño de fuente */
-    font-family: 'Courier New', monospace; /* Fuente de código */
+/* Estilos para las flechas de navegación */
+.nav-button {
+    font-size: 24px;
+    background: rgba(192, 192, 192, 0.5); /* Color plomo transparente */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 50%; /* Forma circular */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.Excel-to-SQLite,
-.Demo-Dashboard {
-    margin-bottom: 30px; /* Agregar margen inferior para separar las secciones */
+/* CSS */
+.nav-container {
+    position: relative; /* Añade posición relativa para posicionar las flechas dentro de este contenedor */
 }
 
-.Excel-to-SQLite h3,
-.Demo-Dashboard h3 {
-    font-size: 1.5em; /* Tamaño de fuente del título */
-    margin-bottom: 10px; /* Espacio inferior para separar el título del párrafo */
+.prev-button {
+    left: 0; /* Posiciona la flecha previa a la izquierda */
 }
 
-.Excel-to-SQLite p,
-.Demo-Dashboard p {
-    font-size: 1em; /* Tamaño de fuente del párrafo */
+.next-button {
+    right: 0; /* Posiciona la flecha siguiente a la derecha */
 }
 
-.Excel-to-SQLite button,
-.Demo-Dashboard button {
-    font-size: 1em; /* Tamaño de fuente del botón */
-    padding: 10px 20px; /* Espaciado interno del botón */
+.blog-card {
+    /* Otros estilos de la tarjeta */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.blog-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
 }
 
 .boton-flotante {
@@ -532,5 +538,60 @@ header nav a:last-child button {
     }
     to {
         transform: scale(1.1);
+    }
+}
+iframe {
+    width: 100%; /* Ajustar al ancho del contenedor padre */
+    height: 500px; /* Altura fija o puedes ajustarla según sea necesario */
+    border: none; /* Eliminar el borde del iframe */
+}
+.dashboard-preview {
+    max-width: 300px; /* Ajusta este valor según el tamaño deseado */
+    margin: auto; /* Centra la imagen horizontalmente */
+}
+
+.dashboard-image {
+    width: 100%;
+    height: auto;
+}
+.servicio {
+    transition: transform 0.3s ease-in-out;
+}
+
+.servicio:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 90%; /* Cambia el porcentaje según lo prefieras */
+    margin: 0 auto; /* Esto centra el contenedor principal horizontalmente */
+    padding: 20px;
+}
+
+#descripcion-servicios {
+    max-width: 90%; /* Cambia el porcentaje según lo prefieras */
+    margin: 0 auto; /* Esto centra la descripción de servicios horizontalmente */
+}
+
+.embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espacio entre el PDF y la descripción de servicios */
+}
+
+.embed-container embed {
+    max-width: 100%; /* El PDF ocupará todo el ancho disponible */
+    height: auto; /* El alto del PDF se ajustará automáticamente */
+}
+
+/* Media query para ajustar estilos en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #descripcion-servicios {
+        font-size: 14px;
     }
 }
