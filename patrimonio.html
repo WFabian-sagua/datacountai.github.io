@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicios Patrimoniales</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 200px;
+            display: block;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0;
+            font-size: 32px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-container {
+            width: 100%;
+            height: 600px; /* Ajusta la altura según necesites */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .dashboard-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-description p {
+            margin: 10px 0;
+        }
+
+        .dashboard-description a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .dashboard-description a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+		
+		.back-button-container {
+            text-align: left;
+            margin-bottom: 20px;
+            /* Agregamos un poco de margen izquierdo */
+            margin-left: 178px;
+        }
+
+        /* Estilo para la sección de descripción de servicios */
+        #descripcion-servicios {
+            margin-top: 50px; /* Espacio entre el PDF y la descripción */
+        }
+
+        #descripcion-servicios h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #descripcion-servicios p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="media/Logo.png" alt="Data Count Ai" class="logo">
+        <h1>Servicios Patrimoniales: Gestión Patrimonial</h1>
+		<div class="dashboard-container">
+            <!-- Aquí incrusta tu dashboard de Looker Studio -->
+            <iframe width="100%" height="800" src="https://lookerstudio.google.com/embed/reporting/e83e1dcb-f115-447c-b76b-cf60abc857ab/page/NBN0D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+    </div>
+    <div>
+        <embed src="docs/SERVICIOS PATRIMONIALES - SP.pdf" type="application/pdf" width="100%" height="900px" />
+    </div>
+    <!-- Descripción de servicios -->
+    <section id="descripcion-servicios">
+        <div class="container">
+            <h2>Descripción de Servicios</h2>
+            <p>
+                OFERTA DE SERVICIOS ESPECIALIZADOS DE CONTABILIDAD GUBERNAMENTAL PARA PATRIMONIO 
+
+                PRESENTACION: 
+
+                En DATA COUNT AI, entendemos de cerca la problemática del control patrimonial en las entidades gubernamentales y somos conscientes de las inconsistencias existentes entre los registros procesados en el inventario físico, el Sistema Integrado de Gestión Administrativa (SIGA) Patrimonio y el Sistema Integrado de Administración Financiera (SIAF). Reconocemos la importancia de abordar estas discrepancias para garantizar una gestión eficiente y transparente de los activos en el sector público.
+                <!-- Agrega más descripciones de servicios aquí -->
+            </p>
+        </div>
+		<div class="back-button-container">
+			<button class="back-button" onclick="window.history.back()">Regresar</button>
+		</div>
+    </section>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=51931555720" class="boton-flotante">
+        <img src="media/wsp.png" alt="WhatsApp">
+    </a>
+    <footer style="background-color: #1E1E1E; color: white; padding: 20px 0;">
+        <div class="container" style="display: flex; justify-content: flex-start; align-items: center;">
+            <img src="media/Logo-dca.png" alt="Data Count Ai" style="max-width: 180px; margin-right: 5px;">
+            <div>
+                <p style="margin: 0; font-size: 12px; line-height: 1; color: white;">
+                    &copy; 2024 Data Count Ai. Todos los derechos reservados. <br>
+                    <br>
+                    Correo electrónico: <a href="mailto:datacountai@proton.me" style="color: white;">datacountai@proton.me</a> <br>
+                    Teléfono: <a href="tel:+51931555720" style="color: white;">+51 931 555 720</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
