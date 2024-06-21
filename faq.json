@@ -1,0 +1,14 @@
+[
+  {
+    "question": "¿Cuál es el horario de atención?",
+    "answer": "Nuestro horario de atención es de lunes a viernes de 9am a 6pm."
+  },
+  {
+    "question": "¿Cómo puedo contactar soporte?",
+    "answer": "Puedes contactar a nuestro soporte técnico al correo soporte@ejemplo.com."
+  },
+  {
+    "question": "¿Cuáles son los métodos de pago aceptados?",
+    "answer": "Aceptamos pagos con tarjeta de crédito, transferencia bancaria y PayPal."
+  }
+]
