@@ -10,18 +10,47 @@ body {
     height: 100vh;
 }
 
+/* Estilos del encabezado */
+.header {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluir el padding y border en el ancho total */
+}
+
+.header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-title {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.header i {
+    font-size: 1.5rem;
+}
+
+/* Estilos del contenedor principal del chat */
 .chat-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    height: 900px; /* Altura fija del contenedor */
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-	height: 100vh;
+    margin: 60px auto; /* Centrar el contenedor */
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-box {
-    height: calc(95% - 60px);
+    flex-grow: 1;
     overflow-y: auto;
     padding: 20px;
 }
@@ -37,15 +66,17 @@ body {
     background-color: #007bff;
     color: #fff;
     align-self: flex-end;
-	float: right;
+    float: right;
     text-align: right;
+    clear: both;
 }
 
 .received {
     background-color: #f0f0f0;
     color: #333;
-	float: left;
+    float: left;
     text-align: left;
+    clear: both;
 }
 
 .input-container {
@@ -70,12 +101,12 @@ button {
     margin-left: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 50%; /* Hace que el botón sea redondo */
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Ajusta el tamaño del botón según el tamaño del icono */
-    height: 40px; /* Ajusta el tamaño del botón según el tamaño del icono */
+    width: 40px;
+    height: 40px;
 }
 
 button:hover {
@@ -83,26 +114,77 @@ button:hover {
 }
 
 button i {
-    font-size: 18px; /* Tamaño del icono */
+    font-size: 18px;
 }
 
+/* Estilos del menú de ayuda */
 .help-menu {
     margin-top: 10px;
 }
 
-.help-menu button {
+.category-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.help-menu-btn {
     display: block;
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.help-menu button:hover {
+/* Colores personalizados por categoría */
+.category-info-general .help-menu-btn {
+    background-color: #33d1ff;
+    color: #fff;
+}
+
+.category-info-general .help-menu-btn:hover {
     background-color: #0056b3;
+}
+
+.category-videos .help-menu-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.category-videos .help-menu-btn:hover {
+    background-color: #218838;
+}
+
+.category-quiz .help-menu-btn {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.category-quiz .help-menu-btn:hover {
+    background-color: #e0a800;
+}
+
+.category-jokes .help-menu-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.category-jokes .help-menu-btn:hover {
+    background-color: #c82333;
+}
+
+/* Estilos del mensaje de descargo de responsabilidad */
+.disclaimer {
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
 }
