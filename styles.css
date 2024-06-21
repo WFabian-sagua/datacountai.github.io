@@ -127,6 +127,7 @@ button i {
     margin-bottom: 5px;
 }
 
+/* Estilo básico para los botones del menú */
 .help-menu-btn {
     display: block;
     width: 100%;
@@ -148,32 +149,42 @@ button i {
     background-color: #0056b3;
 }
 
-.category-videos .help-menu-btn {
+.category-servicios .help-menu-btn {
     background-color: #28a745;
     color: #fff;
 }
 
-.category-videos .help-menu-btn:hover {
+.category-servicios .help-menu-btn:hover {
     background-color: #218838;
 }
 
-.category-quiz .help-menu-btn {
+.category-contabilidad .help-menu-btn {
     background-color: #ffc107;
     color: #fff;
 }
 
-.category-quiz .help-menu-btn:hover {
+.category-contabilidad .help-menu-btn:hover {
     background-color: #e0a800;
 }
 
-.category-jokes .help-menu-btn {
+.category-reportes .help-menu-btn {
+    background-color: #6f42c1;
+    color: #fff;
+}
+
+.category-reportes .help-menu-btn:hover {
+    background-color: #5a3e8a;
+}
+
+.category-amenidades .help-menu-btn {
     background-color: #dc3545;
     color: #fff;
 }
 
-.category-jokes .help-menu-btn:hover {
+.category-amenidades .help-menu-btn:hover {
     background-color: #c82333;
 }
+
 
 /* Estilos del mensaje de descargo de responsabilidad */
 .disclaimer {
