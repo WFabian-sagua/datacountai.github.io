@@ -39,7 +39,7 @@ body {
 .chat-container {
     width: 100%;
     max-width: 600px; /* Ancho máximo del contenedor */
-    height: 700px; /* Altura fija del contenedor */
+    height: 720px; /* Altura fija del contenedor */
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
