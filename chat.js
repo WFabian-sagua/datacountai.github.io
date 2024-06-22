@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				Nuestro juego está en constante actualización y transformación para asegurarnos de que sea accesible y divertido, al mismo tiempo que educativo. Estamos comprometidos a proporcionar contenido que sea comprensible tanto para contadores experimentados como para aquellos que están comenzando en este campo.<br><br>
 				Adelantamos que próximamente lanzaremos un juego de casos prácticos basados en NICSP, diseñado para brindar un mayor expertise a los contadores en el ámbito de la contabilidad pública.<br><br>
 				¿Estás listo/a para poner a prueba tus conocimientos contables? ¡Diviértete y aprende con nuestra Trivia Contable!<br><br>
-				Accede al juego aquí: <a href="https://datacountai.digital" target="_blank">Trivia Contable</a>`;
+				Accede al juego aquí: <a href="https://datacountai.digital/triviacontable" target="_blank">Trivia Contable</a>`;
 					break;
 
             }
