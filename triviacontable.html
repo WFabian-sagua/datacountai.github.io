@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Contable</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia Contable</h1>
+        <div id="level-indicator"></div>
+        <div id="score"></div>
+        <div id="question"></div>
+        <div id="answers">
+            <button class="answer"></button>
+            <button class="answer"></button>
+            <button class="answer"></button>
+            <button class="answer"></button>
+        </div>
+        <button id="next-btn">Siguiente</button>
+        <div id="result" class="hidden"></div>
+        <div id="levels"></div>
+        <div id="share">
+            <button id="share-btn">Compartir resultado</button>
+            <div id="share-result" class="hidden">
+                <img id="shared-image" alt="Captura de pantalla del resultado">
+                <div id="share-link"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="game.js"></script>
+	<footer>
+        &copy; 2024 Data Count Ai. Todos los derechos reservados. <br>
+    </footer>
+</body>
+</html>
