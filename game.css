@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s; /* Transición suave del color de fondo */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#level-indicator, #score {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.correct {
+    background-color: #28a745 !important;
+}
+
+.incorrect {
+    background-color: #dc3545 !important;
+}
+
+#next-btn {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover {
+    background-color: #5a6268;
+}
+
+#result {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#levels {
+    margin-top: 20px;
+}
+
+#levels button {
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#levels button:hover {
+    background-color: #138496;
+}
+
+#share {
+    margin-top: 20px;
+}
+
+#share button {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#share button:hover {
+    background-color: #23272b;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Alinea el texto dentro del contenedor */
+    position: relative; /* Posición relativa para poder posicionar el footer */
+}
+
+footer {
+    position: absolute; /* Posición absoluta para posicionar el footer */
+    bottom: -30px; /* Ajuste para centrar verticalmente el footer debajo del contenedor */
+    left: 0;
+    right: 0;
+    margin: auto; /* Centra horizontalmente el footer */
+    font-size: 14px;
+    text-align: center; /* Centra el texto dentro del footer */
+    color: #666;
+}
