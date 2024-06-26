@@ -595,3 +595,51 @@ iframe {
         font-size: 14px;
     }
 }
+
+#dynamic-text {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    opacity: 0;
+    animation: fade-in 1s forwards, blink 5s steps(5, start) infinite;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.novedades {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    position: fixed; /* Posición fija en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: -100px; /* Comienza oculto fuera de la pantalla */
+    left: 0;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out; /* Transición suave al mostrar */
+    font-size: 16px; /* Tamaño del texto */
+    font-family: 'Roboto', sans-serif; /* Fuente del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+	height: 80px; /* Altura del anuncio */
+}
+
+.novedades.show {
+    top: 0; /* Muestra el anuncio moviéndolo hacia arriba */
+}
+
+/* Ajuste para el contenido principal */
+body.show-novedades {
+    margin-top: 60px; /* Ajuste según el tamaño del anuncio */
+}
+
