@@ -643,3 +643,91 @@ body.show-novedades {
     margin-top: 60px; /* Ajuste según el tamaño del anuncio */
 }
 
+.futuristic-button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Asegura que no haya subrayado en el botón */
+	display: inline-block;
+    line-height: 1; /* Ajusta la altura de línea */
+    text-align: center; /* Centra el texto horizontalmente */
+    box-sizing: border-box; /* Asegura que el padding sea considerado en el tamaño del botón */
+}
+
+.futuristic-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.futuristic-button:hover::after {
+    bottom: -10px;
+    background-color: #FFFFFF; 
+}
+
+.data-svg {
+    width: 28px;
+    height: auto;
+    fill: transparent;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.futuristic-button:hover .data-svg circle,
+.futuristic-button:hover .data-svg line {
+    opacity: 0.6;
+}
+
+.futuristic-button:hover .data-svg circle:nth-child(1) {
+    transform: translate(-10px, -10px);
+}
+
+.futuristic-button:hover .data-svg circle:nth-child(2) {
+    transform: translate(10px, -10px);
+}
+
+.futuristic-button:hover .data-svg circle:nth-child(3) {
+    transform: translate(10px, 10px);
+}
+
+.futuristic-button:hover .data-svg circle:nth-child(4) {
+    transform: translate(-10px, 10px);
+}
+
+.futuristic-button:hover .data-svg line:nth-child(5) {
+    transform: rotate(90deg);
+}
+
+.futuristic-button:hover {
+    box-shadow: 0 0 30px rgba(0, 242, 96, 0.7), 0 0 30px rgba(5, 117, 230, 0.7);
+}
+
+.futuristic-button:active {
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
