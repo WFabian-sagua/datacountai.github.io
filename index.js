@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 showMessage('¡Gracias por suscribirte!', 'success');
                 form.reset(); // Limpiar el formulario después del envío exitoso
             } else {
-                showMessage('Error al enviar el formulario', 'error');
+                showMessage('Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.', 'error');
             }
         })
         .catch(error => showMessage('Error en la solicitud: ' + error, 'error'));
