@@ -24,8 +24,15 @@ $(document).ready(function() {
 
         // Iterar sobre las líneas del CSV
         for (let i = 1; i < lines.length; i++) {
-            const obj = {};
             const currentLine = lines[i].split(',');
+
+            // Verificar que la línea tenga la misma cantidad de campos que las cabeceras
+            if (currentLine.length !== headers.length) {
+                console.warn(`Ignorando línea ${i + 1} del CSV debido a que no coincide con la estructura esperada.`);
+                continue; // Saltar esta línea y continuar con la siguiente
+            }
+
+            const obj = {};
 
             // Crear un objeto con los datos de cada línea
             for (let j = 0; j < headers.length; j++) {
