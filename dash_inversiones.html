@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Inversión Pública del Perú - DEMO</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="dash_inversiones.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dash_inversiones.js" defer></script>
+</head>
+<body>
+    <div id="welcome-message">
+        <div id="welcome-content">
+            <h2>¡Bienvenido al Dashboard de Inversión Pública del Perú - DEMO!</h2>
+            <p>Explora y analiza datos sobre inversión pública en el Perú a través de tres gráficos principales:</p>
+            <ul>
+                <li><strong>Evolución Financiera:</strong> Visualiza la evolución de la inversión a lo largo del tiempo.</li>
+                <li><strong>Distribución de Inversiones por Sector y Entidad:</strong> Observa cómo se distribuyen las inversiones en diferentes sectores y entidades.</li>
+                <li><strong>Comparación de Avance Físico por Entidad:</strong> Compara el avance físico de las inversiones entre diferentes entidades.</li>
+            </ul>
+            <p>Desarrollado por Data Count AI y programado por Fabian Sagua.</p>
+            <button id="close-welcome-button">Cerrar</button>
+        </div>
+    </div>
+
+    <img src="media/Logo.png" alt="Logo" id="logo">
+
+    <h1>Dashboard de Inversión Pública del Perú - DEMO</h1>
+    <p>Este dashboard proporciona un resumen de las inversiones del Banco de Inversiones del Perú desde el año 2001 hasta el mes de abril del 2024...</p>
+
+    <div class="filter-container">
+        <label for="year-range-slider">Seleccionar rango de años:</label>
+        <input type="range" id="year-range-slider" min="2001" max="2024" value="2023,2024" step="1">
+    </div>
+
+    <div class="filter-container">
+        <label for="sector-dropdown">Filtrar por Sector:</label>
+        <select id="sector-dropdown" multiple></select>
+    </div>
+
+    <div class="filter-container">
+        <label for="departamento-dropdown">Filtrar por Departamento:</label>
+        <select id="departamento-dropdown" multiple></select>
+    </div>
+
+    <div id="evolucion-financiera" class="chart"></div>
+    <div id="distribucion-inversiones" class="chart"></div>
+    <div id="avance-fisico" class="chart"></div>
+</body>
+</html>
