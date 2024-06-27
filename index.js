@@ -41,3 +41,40 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(changeText, 5000); // Change text every 5 seconds
     changeText(); // Initial call to set the first text
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("subscribe-form");
+    const validationMessage = document.getElementById("validation-message");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el envío automático del formulario
+        
+        var formData = new FormData(form);
+        
+        fetch('https://script.google.com/macros/s/AKfycbyKGqkrQKq0HyVdekNIntM6Ql0R2dsR7RUoQA13-NKs_foCdHiRYfeOA-nC-jJFBF95wA/exec', {
+            method: 'POST',
+            body: new URLSearchParams(formData) // Convertir FormData a URLSearchParams
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === 'success') {
+                showMessage('Formulario enviado correctamente', 'success');
+                form.reset(); // Limpiar el formulario después del envío exitoso
+            } else {
+                showMessage('Error al enviar el formulario', 'error');
+            }
+        })
+        .catch(error => showMessage('Error en la solicitud: ' + error, 'error'));
+    });
+
+    function showMessage(message, type) {
+        validationMessage.textContent = message;
+        validationMessage.classList.add('show');
+        setTimeout(() => {
+            validationMessage.classList.add('hide');
+            setTimeout(() => {
+                validationMessage.classList.remove('show', 'hide');
+            }, 500); // Match this duration with the CSS transition duration
+        }, 3000); // Message display duration
+    }
+});
