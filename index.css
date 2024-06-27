@@ -509,42 +509,104 @@ header nav a:last-child button {
     transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
 }
 
-.boton-flotante {
+/* Estilo para la ventana de chat flotante */
+.chat-flotante {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366; /* Color de fondo de WhatsApp */
+    width: 300px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.chat-header {
+    background-color: #007bff; /* Color de fondo */
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.3em;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.chat-body p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif; /* Ajusta la familia de fuentes según prefieras */
+}
+
+.start-chat-btn {
+    background-color: #007bff; /* Color de fondo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-chat-btn:hover {
+    background-color: #0056b3;
+}
+
+.chat-flotante-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px; /* Tamaño del botón flotante */
+    height: 80px; /* Tamaño del botón flotante */
+    background-color: white; /* Hacer transparente para usar solo la imagen */
     border-radius: 50%;
     text-align: center;
     line-height: 60px; /* Centra verticalmente el contenido */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
-    animation: palpitar 1s infinite alternate; /* Efecto de palpitar */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+    animation: palpitar 1s infinite alternate;
 }
 
-.boton-flotante img {
-    width: 50px; /* Ajusta el tamaño del icono */
-    height: 50px; /* Ajusta el tamaño del icono */
-    vertical-align: middle; /* Alinea verticalmente el icono */
-    animation: palpitar 1s infinite alternate; /* Efecto de palpitar */
+.chat-flotante-btn img {
+    max-width: 90%; /* Ajusta el tamaño máximo del icono */
+    max-height: 90%; /* Ajusta el tamaño máximo del icono */
+    border-radius: 70%; /* Asegura que el icono esté en forma de círculo */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Animación de palpitar */
 @keyframes palpitar {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
 }
-iframe {
-    width: 100%; /* Ajustar al ancho del contenedor padre */
-    height: 500px; /* Altura fija o puedes ajustarla según sea necesario */
-    border: none; /* Eliminar el borde del iframe */
-}
+
 .dashboard-preview {
     max-width: 300px; /* Ajusta este valor según el tamaño deseado */
     margin: auto; /* Centra la imagen horizontalmente */
@@ -765,6 +827,9 @@ body.show-novedades {
     color: #333;
     font-size: 28px;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .subscribe-form-container {
@@ -774,7 +839,7 @@ body.show-novedades {
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .subscribe-form-container form {
@@ -794,12 +859,15 @@ body.show-novedades {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
 }
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus {
-    border-color: #007bff;
+    border-color: #0575e6; /* Color de foco */
+    box-shadow: 0 0 8px rgba(5, 117, 230, 0.3); /* Sombra de foco */
     outline: none;
 }
 
@@ -811,6 +879,9 @@ body.show-novedades {
     font-size: 16px;
     pointer-events: none;
     transition: all 0.3s ease-out;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    padding: 0 5px;
 }
 
 .form-group input[type="text"]:focus + label,
@@ -820,7 +891,7 @@ body.show-novedades {
     top: -20px;
     left: 10px;
     font-size: 12px;
-    color: #007bff;
+    color: #0575e6; /* Color de foco */
 }
 
 .form-group small.form-text {
@@ -828,42 +899,48 @@ body.show-novedades {
     font-size: 12px;
     color: #666;
     margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 input[type="submit"] {
-    background-color: #007bff;
-    color: white;
+    background-color: #0575e6; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
     border: none;
-    padding: 12px 20px;
+    padding: 14px 24px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    outline: none;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #005aa7; /* Color de fondo del botón al pasar el mouse */
 }
 
 .validation-message {
     display: none;
-    background: linear-gradient(45deg, #00f260, #0575e6);
+    background-color: #0575e6; /* Color de fondo del mensaje de validación */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-top: 10px;
     text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-    transition: opacity 0.5s ease;
-    position: relative;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .validation-message.show {
     display: block;
-    opacity: 1;
+    animation: fade-in-out 3s ease-out;
 }
 
-.validation-message.hide {
-    opacity: 0;
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
 }
