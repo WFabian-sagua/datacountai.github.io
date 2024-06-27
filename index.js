@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             if (data.result === 'success') {
-                showMessage('Formulario enviado correctamente', 'success');
+                showMessage('¡Gracias por suscribirte!', 'success');
                 form.reset(); // Limpiar el formulario después del envío exitoso
             } else {
                 showMessage('Error al enviar el formulario', 'error');
