@@ -8,21 +8,18 @@ $(document).ready(function() {
 
     function fetchData(callback) {
         console.log('Iniciando llamada a la API...');
-        $.ajax({
-            url: proxyUrl + encodeURIComponent(apiUrl + '?' + $.param(data)),
-            dataType: 'json',
-            success: function(response) {
-                const data = JSON.parse(response.contents);
+        axios.get(proxyUrl + encodeURIComponent(apiUrl + '?' + $.param(data)))
+            .then(response => {
+                const data = JSON.parse(response.data.contents);
                 if (data.result && data.result.records) {
                     callback(data.result.records);
                 } else {
                     console.error('Error: No se encontraron datos en la respuesta.');
                 }
-            },
-            error: function(xhr, status, error) {
+            })
+            .catch(error => {
                 console.error('Error al obtener los datos:', error);
-            }
-        });
+            });
     }
 
     fetchData(function(records) {
