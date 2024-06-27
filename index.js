@@ -19,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById("dynamic-text");
     const texts = [
-        "La Ciencia de Datos<br>al Servicio del Gobierno",
-		"Prueba nuestro<br>Dashboard Dinámico"
+         "Transforma tus datos<br>en decisiones inteligentes",
+	 "Innovación que impulsa tu futuro",
+         "Descubre el poder<br>de la ciencia de datos",
+         "Optimiza tus recursos<br>con nuestra tecnología",
+         "Tu aliado en la era digital",
+         "Soluciones que<br>impulsan el progreso",
+         "Conéctate al futuro con nosotros"
     ];
     let index = 0;
 
