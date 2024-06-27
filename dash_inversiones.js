@@ -1,5 +1,6 @@
 $(document).ready(function() {
     const apiUrl = 'https://api.datosabiertos.mef.gob.pe/DatosAbiertos/v1/datastore_search';
+    const proxyUrl = 'https://api.allorigins.win/get?url=';
     const data = {
         resource_id: 'f9cc4ba0-931a-4b70-86c9-eacbd8c68596',
         limit: 1000  // Aumentar el límite si necesitas más datos
@@ -8,12 +9,12 @@ $(document).ready(function() {
     function fetchData(callback) {
         console.log('Iniciando llamada a la API...');
         $.ajax({
-            url: apiUrl,
-            data: data,
-            dataType: 'jsonp',
+            url: proxyUrl + encodeURIComponent(apiUrl + '?' + $.param(data)),
+            dataType: 'json',
             success: function(response) {
-                if (response.result && response.result.records) {
-                    callback(response.result.records);
+                const data = JSON.parse(response.contents);
+                if (data.result && data.result.records) {
+                    callback(data.result.records);
                 } else {
                     console.error('Error: No se encontraron datos en la respuesta.');
                 }
