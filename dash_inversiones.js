@@ -1,18 +1,46 @@
 $(document).ready(function() {
-    const dataUrl = 'data.json'; // URL del archivo JSON
+    const csvUrl = 'media/inversiones.csv'; // URL del archivo CSV
 
     function fetchData(callback) {
-        console.log('Cargando datos desde el archivo JSON...');
-        $.getJSON(dataUrl, function(data) {
-            callback(data.records); // Asume que la estructura de datos tiene un campo `records`
-        })
-        .fail(function(jqxhr, textStatus, error) {
-            console.error('Error al obtener los datos:', error);
-        });
+        console.log('Cargando datos desde el archivo CSV...');
+        fetch(csvUrl)
+            .then(response => response.text())
+            .then(data => {
+                const records = parseCSV(data); // Parsear el CSV a formato de array de objetos
+                callback(records);
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos CSV:', error);
+            });
+    }
+
+    function parseCSV(csv) {
+        // Dividir el CSV por líneas
+        const lines = csv.split('\n');
+        const result = [];
+        
+        // Obtener las cabeceras del CSV (primer línea)
+        const headers = lines[0].split(',');
+
+        // Iterar sobre las líneas del CSV
+        for (let i = 1; i < lines.length; i++) {
+            const obj = {};
+            const currentLine = lines[i].split(',');
+
+            // Crear un objeto con los datos de cada línea
+            for (let j = 0; j < headers.length; j++) {
+                obj[headers[j].trim()] = currentLine[j].trim(); // Tratar espacios en blanco
+            }
+
+            // Agregar el objeto al resultado
+            result.push(obj);
+        }
+
+        return result;
     }
 
     fetchData(function(records) {
-        console.log(records);
+        console.log('Datos obtenidos del CSV:', records);
 
         // Llenar dropdowns
         fillDropdowns(records);
@@ -20,7 +48,7 @@ $(document).ready(function() {
         // Crear gráfico de evolución financiera
         var trace1 = {
             x: records.map(record => record.FECHA_REGISTRO),
-            y: records.map(record => record.MONTO_VIABLE),
+            y: records.map(record => parseFloat(record.MONTO_VIABLE)),
             type: 'scatter',
             mode: 'lines+markers',
             name: 'Monto Viable'
@@ -44,7 +72,7 @@ $(document).ready(function() {
             if (!sectorEntidad[record.SECTOR][record.ENTIDAD]) {
                 sectorEntidad[record.SECTOR][record.ENTIDAD] = 0;
             }
-            sectorEntidad[record.SECTOR][record.ENTIDAD] += record.MONTO_VIABLE;
+            sectorEntidad[record.SECTOR][record.ENTIDAD] += parseFloat(record.MONTO_VIABLE);
         });
 
         var treemapData = [];
@@ -69,9 +97,10 @@ $(document).ready(function() {
         Plotly.newPlot('distribucion-inversiones', treemapData, layout2);
 
         // Crear gráfico de comparación de avance físico por entidad
+        var avanceFisicoData = records.filter(record => !isNaN(parseFloat(record.AVANCE_FISICO)));
         var trace3 = {
-            x: records.map(record => record.AVANCE_FISICO),
-            y: records.map(record => record.ENTIDAD),
+            x: avanceFisicoData.map(record => parseFloat(record.AVANCE_FISICO)),
+            y: avanceFisicoData.map(record => record.ENTIDAD),
             type: 'bar',
             orientation: 'h'
         };
