@@ -78,3 +78,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 3000); // Message display duration
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chatFlotante = document.getElementById('chatFlotante');
+    const chatFlotanteBtn = document.getElementById('chatFlotanteBtn');
+    const closeChatBtn = document.getElementById('closeChatBtn');
+    const startChatBtn = document.getElementById('startChatBtn');
+
+    chatFlotanteBtn.addEventListener('click', function() {
+        chatFlotante.style.display = 'block';
+        chatFlotanteBtn.style.display = 'none';
+    });
+
+    closeChatBtn.addEventListener('click', function() {
+        chatFlotante.style.display = 'none';
+        chatFlotanteBtn.style.display = 'block';
+    });
+
+    startChatBtn.addEventListener('click', function() {
+        window.location.href = 'https://datacountai.digital/fabianbot'; // Cambia esto a la URL de tu asistente virtual
+    });
+});
