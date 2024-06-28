@@ -20,11 +20,15 @@ $(document).ready(function() {
         const result = [];
         
         // Obtener las cabeceras del CSV (primer línea)
-        const headers = lines[0].split(',');
+        const headers = lines[0].split(',').map(header => header.trim());
 
         // Iterar sobre las líneas del CSV
         for (let i = 1; i < lines.length; i++) {
-            const currentLine = lines[i].split(',');
+            if (lines[i].trim() === '') {
+                continue; // Saltar líneas vacías
+            }
+
+            const currentLine = lines[i].split(',').map(field => field.trim());
 
             // Verificar que la línea tenga la misma cantidad de campos que las cabeceras
             if (currentLine.length !== headers.length) {
@@ -36,7 +40,7 @@ $(document).ready(function() {
 
             // Crear un objeto con los datos de cada línea
             for (let j = 0; j < headers.length; j++) {
-                obj[headers[j].trim()] = currentLine[j].trim(); // Tratar espacios en blanco
+                obj[headers[j]] = currentLine[j]; // Tratar espacios en blanco
             }
 
             // Agregar el objeto al resultado
