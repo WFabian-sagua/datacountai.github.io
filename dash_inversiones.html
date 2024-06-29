@@ -4,50 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Inversión Pública del Perú - DEMO</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel="stylesheet" href="dash_inversiones.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="dash_inversiones.js" defer></script>
 </head>
 <body>
-    <div id="welcome-message">
-        <div id="welcome-content">
-            <h2>¡Bienvenido al Dashboard de Inversión Pública del Perú - DEMO!</h2>
-            <p>Explora y analiza datos sobre inversión pública en el Perú a través de tres gráficos principales:</p>
-            <ul>
-                <li><strong>Evolución Financiera:</strong> Visualiza la evolución de la inversión a lo largo del tiempo.</li>
-                <li><strong>Distribución de Inversiones por Sector y Entidad:</strong> Observa cómo se distribuyen las inversiones en diferentes sectores y entidades.</li>
-                <li><strong>Comparación de Avance Físico por Entidad:</strong> Compara el avance físico de las inversiones entre diferentes entidades.</li>
-            </ul>
-            <p>Desarrollado por Data Count AI y programado por Fabian Sagua.</p>
-            <button id="close-welcome-button">Cerrar</button>
+    <div id="dashboard-container">
+        <img src="media/Logo.png" alt="Logo" id="logo">
+        <h1>Dashboard de Inversión Pública del Perú - DEMO</h1>
+        <p>Este dashboard proporciona un resumen de las inversiones del Banco de Inversiones del Perú desde el año 2001 hasta el mes de abril del 2024. Incluye información detallada sobre el estado de las inversiones, información financiera como Devengados, Presupuesto Institucional de Apertura (PIA), Presupuesto Institucional Modificado (PIM), costo actualizado, avance físico, montos programados de las inversiones, estado situacional, programas, subprograma, entre otros. Este panel de visualización es una versión demo, desarrollada con la finalidad de permitir a los usuarios explorar y comprender mejor los datos de inversión pública del Perú.</p>
+
+        <div class="filter-container">
+            <label for="year-range">Seleccionar rango de años:</label>
+            <input type="range" id="year-range" min="2001" max="2024" step="1" value="2023" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="2001" label="2001"></option>
+                <option value="2005" label="2005"></option>
+                <option value="2010" label="2010"></option>
+                <option value="2015" label="2015"></option>
+                <option value="2020" label="2020"></option>
+                <option value="2024" label="2024"></option>
+            </datalist>
+            <span id="year-range-output">2023</span>
+        </div>
+
+        <div class="filter-container">
+			<label for="sector-dropdown">Filtrar por Sector:</label>
+			<select id="sector-dropdown" multiple>
+				<!-- Options added dynamically -->
+				<option value="Gobiernos Locales" selected>GOBIERNOS LOCALES</option>
+			</select>
+		</div>
+
+        <div class="filter-container">
+			<label for="departamento-dropdown">Filtrar por Departamento:</label>
+			<select id="departamento-dropdown" multiple>
+				<!-- Options added dynamically -->
+				<option value="Tacna" selected>TACNA</option>
+			</select>
+		</div>
+
+        <div id="graphs">
+            <div id="evolucion-financiera"></div>
+            <div id="distribucion-inversiones"></div>
+            <div id="avance-fisico"></div>
         </div>
     </div>
-
-    <img src="media/Logo.png" alt="Logo" id="logo">
-
-    <h1>Dashboard de Inversión Pública del Perú - DEMO</h1>
-    <p>Este dashboard proporciona un resumen de las inversiones del Banco de Inversiones del Perú desde el año 2001 hasta el mes de abril del 2024...</p>
-
-    <div class="filter-container">
-        <label for="year-range-slider">Seleccionar rango de años:</label>
-        <input type="range" id="year-range-slider" min="2001" max="2024" value="2023,2024" step="1">
-    </div>
-
-    <div class="filter-container">
-        <label for="sector-dropdown">Filtrar por Sector:</label>
-        <select id="sector-dropdown" multiple></select>
-    </div>
-
-    <div class="filter-container">
-        <label for="departamento-dropdown">Filtrar por Departamento:</label>
-        <select id="departamento-dropdown" multiple></select>
-    </div>
-
-    <div id="evolucion-financiera" class="chart"></div>
-    <div id="distribucion-inversiones" class="chart"></div>
-    <div id="avance-fisico" class="chart"></div>
 </body>
 </html>
