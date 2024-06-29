@@ -1,155 +1,131 @@
-$(document).ready(function() {
-    const csvUrl = 'media/inversiones.csv'; // URL del archivo CSV
+document.addEventListener('DOMContentLoaded', function () {
+    const yearRange = document.getElementById('year-range');
+    const yearRangeOutput = document.getElementById('year-range-output');
+    const sectorDropdown = $('#sector-dropdown');
+    const departamentoDropdown = $('#departamento-dropdown');
+    let data = [];
 
-    function fetchData(callback) {
-        console.log('Cargando datos desde el archivo CSV...');
-        fetch(csvUrl)
-            .then(response => response.text())
-            .then(data => {
-                const records = parseCSV(data); // Parsear el CSV a formato de array de objetos
-                callback(records);
-            })
-            .catch(error => {
-                console.error('Error al obtener los datos CSV:', error);
-            });
+    // Initialize Select2
+    sectorDropdown.select2({
+        placeholder: 'Seleccionar Sector',
+        allowClear: true
+    });
+
+    departamentoDropdown.select2({
+        placeholder: 'Seleccionar Departamento',
+        allowClear: true
+    });
+
+    loadData();
+
+    yearRange.addEventListener('input', function () {
+        yearRangeOutput.textContent = yearRange.value;
+        updateGraphs();
+    });
+
+    sectorDropdown.on('change', updateGraphs);
+    departamentoDropdown.on('change', updateGraphs);
+
+    async function loadData() {
+        try {
+            const response = await fetch('data/inversiones.csv');
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const csvData = await response.text();
+            const parsedData = Papa.parse(csvData, { header: true, dynamicTyping: true });
+
+            handleData(parsedData.data);
+        } catch (error) {
+            console.error('Error al obtener los datos CSV:', error);
+        }
     }
 
-    function parseCSV(csv) {
-        // Dividir el CSV por líneas
-        const lines = csv.split('\n');
-        const result = [];
-        
-        // Obtener las cabeceras del CSV (primer línea)
-        const headers = lines[0].split(',').map(header => header.trim());
+    function handleData(csvData) {
+        data = csvData;
+        const sectores = [...new Set(data.map(item => item.SECTOR && item.SECTOR.toUpperCase()).filter(Boolean))];
+        const departamentos = [...new Set(data.map(item => item.DEPARTAMENTO && item.DEPARTAMENTO.toUpperCase()).filter(Boolean))];
 
-        // Iterar sobre las líneas del CSV
-        for (let i = 1; i < lines.length; i++) {
-            if (lines[i].trim() === '') {
-                continue; // Saltar líneas vacías
-            }
+        sectorDropdown.empty().select2({ data: sectores.map(sector => ({ id: sector, text: sector })) });
+        departamentoDropdown.empty().select2({ data: departamentos.map(departamento => ({ id: departamento, text: departamento })) });
 
-            const currentLine = lines[i].split(',').map(field => field.trim());
-
-            // Verificar que la línea tenga la misma cantidad de campos que las cabeceras
-            if (currentLine.length !== headers.length) {
-                console.warn(`Ignorando línea ${i + 1} del CSV debido a que no coincide con la estructura esperada.`);
-                continue; // Saltar esta línea y continuar con la siguiente
-            }
-
-            const obj = {};
-
-            // Crear un objeto con los datos de cada línea
-            for (let j = 0; j < headers.length; j++) {
-                obj[headers[j]] = currentLine[j]; // Tratar espacios en blanco
-            }
-
-            // Agregar el objeto al resultado
-            result.push(obj);
+        // Establecer valores predeterminados si no están en el HTML
+        if (!sectorDropdown.val().length) {
+            sectorDropdown.val(['GOBIERNOS LOCALES']).trigger('change');
+        }
+        if (!departamentoDropdown.val().length) {
+            departamentoDropdown.val(['TACNA']).trigger('change');
         }
 
-        return result;
+        updateGraphs();
     }
 
-    fetchData(function(records) {
-        console.log('Datos obtenidos del CSV:', records);
+    function updateGraphs() {
+        if (!yearRange) return; // Verificar si yearRange está definido
+        const selectedYear = yearRange.value;
+        const selectedSectors = sectorDropdown.val();
+        const selectedDepartments = departamentoDropdown.val();
 
-        // Llenar dropdowns
-        fillDropdowns(records);
+        const filteredData = data.filter(item =>
+            (!selectedSectors.length || selectedSectors.includes(item.SECTOR && item.SECTOR.toUpperCase())) &&
+            (!selectedDepartments.length || selectedDepartments.includes(item.DEPARTAMENTO && item.DEPARTAMENTO.toUpperCase())) &&
+            new Date(item.FECHA_REGISTRO).getFullYear() === parseInt(selectedYear)
+        );
 
-        // Crear gráfico de evolución financiera
-        var trace1 = {
-            x: records.map(record => record.FECHA_REGISTRO),
-            y: records.map(record => parseFloat(record.MONTO_VIABLE)),
-            type: 'scatter',
+        if (!filteredData.length) {
+            console.log('No hay datos para los filtros seleccionados');
+            return;
+        }
+
+        const entities = [...new Set(filteredData.map(item => item.ENTIDAD).filter(Boolean))];
+        const colors = Plotly.d3.scale.category10().range();
+
+        const traces = entities.map((entity, index) => ({
+            x: filteredData.filter(item => item.ENTIDAD === entity).map(item => item.FECHA_REGISTRO),
+            y: filteredData.filter(item => item.ENTIDAD === entity).map(item => item.MONTO_VIABLE),
             mode: 'lines+markers',
-            name: 'Monto Viable'
-        };
+            name: entity,
+            line: { color: colors[index % colors.length] }
+        }));
 
-        var data1 = [trace1];
-        var layout1 = {
+        const layout = {
             title: 'Evolución Financiera a lo largo del Tiempo',
             xaxis: { title: 'Fecha' },
-            yaxis: { title: 'Monto (SOLES)' }
+            yaxis: { title: 'Monto Viable' },
+            annotations: []
         };
 
-        Plotly.newPlot('evolucion-financiera', data1, layout1);
-
-        // Crear gráfico de distribución de inversiones por sector y entidad
-        var sectorEntidad = {};
-        records.forEach(record => {
-            if (!sectorEntidad[record.SECTOR]) {
-                sectorEntidad[record.SECTOR] = {};
-            }
-            if (!sectorEntidad[record.SECTOR][record.ENTIDAD]) {
-                sectorEntidad[record.SECTOR][record.ENTIDAD] = 0;
-            }
-            sectorEntidad[record.SECTOR][record.ENTIDAD] += parseFloat(record.MONTO_VIABLE);
-        });
-
-        var treemapData = [];
-        for (var sector in sectorEntidad) {
-            for (var entidad in sectorEntidad[sector]) {
-                treemapData.push({
-                    type: 'treemap',
-                    labels: [sector, entidad],
-                    parents: ['', sector],
-                    values: [null, sectorEntidad[sector][entidad]],
-                    textinfo: "label+value",
-                    domain: { column: 0 }
+        // Añadir anotaciones en picos y valles
+        traces.forEach(trace => {
+            const maxIndex = trace.y.indexOf(Math.max(...trace.y));
+            const minIndex = trace.y.indexOf(Math.min(...trace.y));
+            if (maxIndex !== -1) {
+                layout.annotations.push({
+                    x: trace.x[maxIndex],
+                    y: trace.y[maxIndex],
+                    xref: 'x',
+                    yref: 'y',
+                    text: 'Pico',
+                    showarrow: true,
+                    arrowhead: 2,
+                    ax: 0,
+                    ay: -40
                 });
             }
-        }
-
-        var layout2 = {
-            title: 'Distribución de Inversiones por Sector y Entidad',
-            grid: { rows: 1, columns: 1 }
-        };
-
-        Plotly.newPlot('distribucion-inversiones', treemapData, layout2);
-
-        // Crear gráfico de comparación de avance físico por entidad
-        var avanceFisicoData = records.filter(record => !isNaN(parseFloat(record.AVANCE_FISICO)));
-        var trace3 = {
-            x: avanceFisicoData.map(record => parseFloat(record.AVANCE_FISICO)),
-            y: avanceFisicoData.map(record => record.ENTIDAD),
-            type: 'bar',
-            orientation: 'h'
-        };
-
-        var data3 = [trace3];
-        var layout3 = {
-            title: 'Comparación de Avance Físico por Entidad',
-            xaxis: { title: 'Avance Físico' },
-            yaxis: { title: 'Entidad' }
-        };
-
-        Plotly.newPlot('avance-fisico', data3, layout3);
-    });
-
-    $('#close-welcome-button').on('click', function() {
-        $('#welcome-message').hide();
-    });
-
-    function fillDropdowns(records) {
-        // Llenar el dropdown de sector
-        var sectores = [...new Set(records.map(record => record.SECTOR))];
-        var sectorDropdown = $('#sector-dropdown');
-        sectores.forEach(sector => {
-            sectorDropdown.append(new Option(sector, sector));
+            if (minIndex !== -1) {
+                layout.annotations.push({
+                    x: trace.x[minIndex],
+                    y: trace.y[minIndex],
+                    xref: 'x',
+                    yref: 'y',
+                    text: 'Valle',
+                    showarrow: true,
+                    arrowhead: 2,
+                    ax: 0,
+                    ay: 40
+                });
+            }
         });
 
-        // Llenar el dropdown de departamento
-        var departamentos = [...new Set(records.map(record => record.DEPARTAMENTO))];
-        var departamentoDropdown = $('#departamento-dropdown');
-        departamentos.forEach(departamento => {
-            departamentoDropdown.append(new Option(departamento, departamento));
-        });
-
-        // Llenar el rango de años
-        var years = [...new Set(records.map(record => new Date(record.FECHA_REGISTRO).getFullYear()))];
-        var yearRangeSlider = $('#year-range-slider');
-        years.sort().forEach(year => {
-            yearRangeSlider.append(new Option(year, year));
-        });
+        Plotly.newPlot('evolucion-financiera', traces, layout);
     }
 });
