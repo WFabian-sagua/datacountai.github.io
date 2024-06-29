@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function loadData() {
         try {
-            const response = await fetch('media/inversiones.csv');
+            const response = await fetch('data/inversiones.csv');
             if (!response.ok) throw new Error('Network response was not ok');
 
             const csvData = await response.text();
@@ -127,5 +127,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         Plotly.newPlot('evolucion-financiera', traces, layout);
+		// Ajustar el tamaño del gráfico al contenedor al cambiar el tamaño de la ventana
+		window.addEventListener('resize', function() {
+			Plotly.relayout('evolucion-financiera', {
+				width: '100%',
+				height: 'auto'
+			});
+        });
     }
 });
