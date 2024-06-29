@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function loadData() {
         try {
-            const response = await fetch('data/inversiones.csv');
+            const response = await fetch('media/inversiones.csv');
             if (!response.ok) throw new Error('Network response was not ok');
 
             const csvData = await response.text();
