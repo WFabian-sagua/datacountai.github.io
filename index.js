@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById("dynamic-text");
     const texts = [
-         "Transforma tus datos<br>en decisiones inteligentes",
-	 "Innovación que impulsa tu futuro",
+		 "Transforma tus datos<br>en decisiones inteligentes",
+		 "Innovación que impulsa tu futuro",
          "Descubre el poder<br>de la ciencia de datos",
          "Optimiza tus recursos<br>con nuestra tecnología",
          "Tu aliado en la era digital",
@@ -58,10 +58,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             if (data.result === 'success') {
-                showMessage('¡Gracias por suscribirte!', 'success');
+                showMessage('Formulario enviado correctamente', 'success');
                 form.reset(); // Limpiar el formulario después del envío exitoso
             } else {
-                showMessage('Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.', 'error');
+                showMessage('Error al enviar el formulario', 'error');
             }
         })
         .catch(error => showMessage('Error en la solicitud: ' + error, 'error'));
@@ -98,4 +98,22 @@ document.addEventListener("DOMContentLoaded", function() {
     startChatBtn.addEventListener('click', function() {
         window.location.href = 'https://datacountai.digital/fabianbot'; // Cambia esto a la URL de tu asistente virtual
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dynamicContent = document.getElementById("dynamic-content");
+    const descriptions = [
+        "En DATA COUNT AI, somos mucho más que una empresa de servicios contables y de ciencia de datos. Somos un equipo apasionado de profesionales que comparten una visión común: impulsar la excelencia en la gestión gubernamental a través de la precisión de datos y el poder de la innovación",
+        "<div class='mision-vision-valores'><div><h3>Misión</h3><p>Nuestra misión es proporcionar servicios contables y de ciencia de datos que impulsen la excelencia en la gestión gubernamental, utilizando la precisión de datos y la innovación como pilares fundamentales.</p></div><div><h3>Visión</h3><p>Queremos ser líderes en transformación digital para el sector público, contribuyendo activamente a la mejora continua de la gestión gubernamental en Perú y más allá.</p>",
+		"</div><div><h3>Valores</h3><p>Nuestros valores incluyen la integridad, la colaboración y el compromiso con la excelencia y la innovación en cada proyecto y servicio que ofrecemos.</p></div></div>"
+    ];
+    let index = 0;
+
+    function changeDescription() {
+        dynamicContent.innerHTML = descriptions[index];
+        index = (index + 1) % descriptions.length;
+    }
+
+    setInterval(changeDescription, 5000); // Cambiar cada 5 segundos (5000 milisegundos)
+    changeDescription(); // Llamada inicial para mostrar el primer contenido
 });
