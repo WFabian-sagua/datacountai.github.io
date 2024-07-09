@@ -113,10 +113,14 @@ header a:hover{
     background-color: rgb(30,30,30);
     color: white;
     text-align: center;
+	padding: 100px 12px;
 }
 
 #nuestros-servicios .container{
-    padding: 150px 12px;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; /*para distribuir las tarjetas equitativamente */
+	gap: 20px; /*Espacio entre las tarjetas */
 }
 
 #nuestros-servicios h2{
@@ -131,9 +135,12 @@ header a:hover{
 #nuestros-servicios .carta{
     background-position: center center;
     background-size: cover;
-    padding: 50px 0px;
-    margin: 30px;
-    border-radius: 15px;
+    padding: 30px;
+    margin: 0 10px;
+    border-radius: 10px;
+	flex: 1 1 300px;
+	max-width: 400px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carta:first-child{
@@ -366,25 +373,6 @@ header nav a:last-child button {
     position: relative;
 }
 
-.social-icon .icon-text {
-    display: none; /* Oculta el texto inicialmente */
-    position: absolute;
-    top: -20px; /* Ajusta la posición del texto */
-    left: 50%; /* Centra el texto */
-    transform: translateX(-50%);
-    background-color: white; /* Fondo blanco para el texto */
-    padding: 3px 6px; /* Espacio alrededor del texto */
-    border-radius: 3px; /* Bordes redondeados */
-    font-size: 12px; /* Tamaño de fuente del texto */
-    opacity: 0; /* Inicialmente transparente */
-    transition: opacity 0.3s ease; /* Transición suave de la opacidad */
-}
-
-.social-icon:hover .icon-text {
-    display: block; /* Muestra el texto al pasar el cursor sobre el ícono */
-    opacity: 1; /* Hace que el texto sea visible */
-}
-
 /* Estilos para el ícono de robot */
 .fa-robot:before {
     content: "\f544"; /* Código del ícono de robot en Font Awesome */
@@ -399,27 +387,8 @@ header nav a:last-child button {
 }
 
 .icon-img {
-    width: 30px; /* Ajusta el tamaño del icono según sea necesario */
-    height: 30px; /* Ajusta el tamaño del icono según sea necesario */
-}
-
-.icon-text {
-    display: none;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 3px 6px;
-    border-radius: 3px;
-    font-size: 12px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.social-icon:hover .icon-text {
-    display: block;
-    opacity: 1;
+    width: 35px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 35px; /* Ajusta el tamaño del icono según sea necesario */
 }
 
 #blog {
@@ -578,8 +547,8 @@ header nav a:last-child button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 80px; /* Tamaño del botón flotante */
-    height: 80px; /* Tamaño del botón flotante */
+    width: 100px; /* Tamaño del botón flotante */
+    height: 100px; /* Tamaño del botón flotante */
     background-color: white; /* Hacer transparente para usar solo la imagen */
     border-radius: 50%;
     text-align: center;
@@ -665,6 +634,28 @@ header nav a:last-child button {
     display: inline-block;
     opacity: 0;
     animation: fade-in 1s forwards, blink 5s steps(5, start) infinite;
+}
+
+#dynamic-content {
+    font-size: 1em; /* Ajustar el tamaño de fuente según el diseño */
+    line-height: 1.6; /* Ajustar el interlineado para una mejor legibilidad */
+    opacity: 1; /* Mostrar el contenido inicialmente */
+    animation: fade-in 1s forwards, blink 5s steps(5, start) infinite;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
 }
 
 @keyframes fade-in {
