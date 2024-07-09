@@ -1,0 +1,273 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+#automatizacion-reportes {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 50px 20px;
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+#automatizacion-reportes .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#automatizacion-reportes h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fbb034; /* Color de título */
+}
+
+#automatizacion-reportes .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#automatizacion-reportes .text-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+#automatizacion-reportes .text-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #fbb034; /* Color de subtítulo */
+}
+
+#automatizacion-reportes .text-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#automatizacion-reportes .text-content ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1em;
+    text-align: left;
+}
+
+#automatizacion-reportes .text-content ul li {
+    margin-bottom: 10px;
+}
+
+#automatizacion-reportes .image-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+#automatizacion-reportes .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+#automatizacion-reportes .how-we-do-it {
+    margin-top: 30px;
+}
+
+#automatizacion-reportes .how-we-do-it h3 {
+    font-size: 2em;
+    color: #fbb034; /* Color de título */
+    margin-bottom: 20px;
+}
+
+#automatizacion-reportes .steps {
+    display: flex;
+    justify-content: space-around;
+}
+
+#automatizacion-reportes .step {
+    text-align: center;
+}
+
+#automatizacion-reportes .step img {
+	margin-top: 80px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#automatizacion-reportes .step p {
+    font-size: 1.2em;
+}
+
+#automatizacion-reportes .coding-animation {
+    margin-top: 0px;
+}
+
+#automatizacion-reportes .coding-animation h3 {
+    font-size: 2em;
+    color: #fbb034; /* Color de título */
+    margin-bottom: 20px;
+}
+
+#automatizacion-reportes .cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#automatizacion-reportes .cta .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fbb034; /* Color de fondo del botón */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+#automatizacion-reportes .cta .btn:hover {
+    background-color: #ffcc00; /* Color de fondo del botón al pasar el ratón */
+}
+
+.realism {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.realism:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fbb034; /* Color destacado */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Estilo para consola */
+
+.console {
+    background-color: #272822; /* Color de fondo oscuro */
+    color: #f8f8f2; /* Color de texto */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    height: 450px; /* Altura fija para mantener el tamaño del contenedor */
+    display: block; /* Cambiar a block para evitar centrar el texto verticalmente */
+}
+
+.console .output {
+    white-space: pre-wrap; /* Permite que el texto se ajuste automáticamente */
+    width: 100%;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.console .output span {
+    display: inline-block;
+}
+
+.console .command {
+    color: #66d9ef; /* Color para comandos */
+	white-space: prep-wrap;
+	text-align: left;
+}
+
+.console .comment {
+    color: #75715e; /* Color para comentarios */
+}
+
+.console .keyword {
+    color: #f92672; /* Color para palabras clave */
+}
+
+.console .variable {
+    color: #a6e22e; /* Color para variables */
+}
+
+.console .function {
+    color: #e6db74; /* Color para funciones */
+}
+
+.console .string {
+    color: #e6db74; /* Color para strings */
+}
+
+.console .number {
+    color: #ae81ff; /* Color para números */
+}
+.vertical-list {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    margin-left: 20px; /* Espacio para las líneas verticales */
+    overflow: hidden; /* Oculta el contenido que se desplazará */
+}
+
+.vertical-list li {
+    opacity: 0; /* Inicialmente oculta los elementos */
+    transform: translateX(-100%); /* Los desplaza fuera de la vista a la izquierda */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave al mostrar */
+    margin-bottom: 20px;
+    padding-left: 20px; /* Espacio para las líneas verticales */
+    position: relative;
+}
+
+.vertical-list li:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #fbb034; /* Color de las líneas verticales */
+}
+
+.vertical-list li:last-child:before {
+    height: 50%;
+    top: 0;
+    bottom: auto;
+}
+
+.vertical-list li span.realism {
+    background: #272822;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note {
+    font-size: 0.9em;
+    color: white;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #424242; /* Fondo gris oscuro */
+    border-left: 4px solid #757575; /* Color de borde izquierdo en gris */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-text {
+    font-weight: bold;
+}
+
+body .logo {
+    width: 180px; /* Tamaño deseado para el logo */
+}
+
+body .logo img {
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+}
