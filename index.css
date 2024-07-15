@@ -258,12 +258,19 @@ footer .container{
         margin-top: 0px;
     }
 
-    #somos-datacount .img-container{
-        background-image: url("media/somos-datacount.jpg");
-        background-size: cover;
-        background-position: center center;
-        height: 500px;
-        width: 400px; 
+    #somos-datacount .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Para que ocupe todo el ancho disponible */
+    }
+
+    #somos-datacount .img-container iframe {
+     width: 100%;
+     max-width: 560px;
+     height: 315px;
+     border: none;
     }
 
     #nuestros-servicios .servicios{
