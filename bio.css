@@ -96,8 +96,8 @@ body {
     }
 
     .button-row .link {
-        max-width: 90%; /* Ajusta el ancho máximo para que no ocupe todo el ancho de la pantalla */
-        margin: 10px auto; /* Añade margen arriba y abajo del botón, y centra horizontalmente */
+        max-width: 80%; /* Ajusta el ancho máximo para que no ocupe todo el ancho de la pantalla */
+        margin: 3px; /* Añade margen arriba y abajo del botón, y centra horizontalmente */
     }
 
     .icon-row .icon {
