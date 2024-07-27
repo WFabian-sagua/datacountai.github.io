@@ -94,6 +94,17 @@ body {
         max-height: 90vh; /* Ajusta la altura máxima para pantallas pequeñas */
         padding: 10px; /* Añade un poco de padding para mejorar el diseño en pantallas pequeñas */
     }
+
+    .button-row .link {
+        max-width: 90%; /* Ajusta el ancho máximo para que no ocupe todo el ancho de la pantalla */
+        margin: 10px auto; /* Añade margen arriba y abajo del botón, y centra horizontalmente */
+    }
+
+    .icon-row .icon {
+        width: 35px; /* Ajusta el tamaño de los iconos para que sean más pequeños en pantallas pequeñas */
+        height: 35px;
+        font-size: 18px; /* Ajusta el tamaño del texto de los iconos */
+    }
 }
 
 .logo img {
@@ -186,6 +197,8 @@ p.welcome-message {
     align-items: center;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo del botón */
+    margin: 0 auto; /* Centra el botón horizontalmente */
 }
 
 .link i {
