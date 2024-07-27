@@ -1,0 +1,210 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-animation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    fill: rgba(0, 123, 255, 0.7);
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    fill: rgba(0, 123, 255, 0.5);
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    fill: rgba(0, 123, 255, 0.3);
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    fill: #007bff;
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor use toda la altura de la pantalla */
+    position: relative;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Añadido para evitar el desbordamiento */
+    max-height: 80vh;
+}
+
+.logo img {
+    max-width: 180px;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.binary-animation-inside {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.binary-animation-inside span {
+    position: absolute;
+    font-size: 20px;
+    color: #000;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+p.welcome-message {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Fila de iconos */
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: #0073e6;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon.facebook { background-color: #3b5998; }
+.icon.whatsapp { background-color: #25d366; }
+.icon.instagram { background-color: #e4405f; }
+
+.icon:hover {
+    background-color: #005bb5;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fila de botones con texto */
+.button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.link {
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.link i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.link span {
+    font-size: 14px;
+}
+
+.link:hover {
+    background-color: #005bb5;
+    transform: scale(1.05); /* Asegúrate de que la escala sea menor a 1.05 si es necesario */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos específicos para cada tipo de enlace */
+.link.facebook { background-color: #3b5998; }
+.link.instagram { background-color: #e4405f; }
+.link.whatsapp { background-color: #25d366; }
+.link.telegram { background-color: #0088cc; }
+.link.website { background-color: #333; }
+.link.tiktok { background-color: #010101; }
+.link.youtube { background-color: #c4302b; }
+.link.email { background-color: #4a4a4a; }
+
+.footer {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #777;
+}
