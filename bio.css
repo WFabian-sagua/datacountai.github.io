@@ -125,21 +125,23 @@ body {
 
 .binary-animation-inside span {
     position: absolute;
-    font-size: 20px;
+    font-size: 40px; /* Aumenta el tamaño del texto */
     color: #000;
     animation: fall linear infinite;
+    opacity: 0.10; /* Aumenta la opacidad para que el texto sea más visible */
 }
 
 @keyframes fall {
     0% {
         top: -10%;
-        opacity: 1;
+        opacity: 0.8; /* Mayor opacidad al principio */
     }
     100% {
         top: 110%;
-        opacity: 0;
+        opacity: 0; /* Desaparece al final */
     }
 }
+
 
 p.welcome-message {
     font-size: 16px;
@@ -182,7 +184,7 @@ p.welcome-message {
 .button-row {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 7px; /* Reduce el espacio entre los botones */
     align-items: center;
 }
 
