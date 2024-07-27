@@ -71,6 +71,7 @@ body {
     width: 100%;
     height: 100vh; /* Asegura que el contenedor use toda la altura de la pantalla */
     position: relative;
+    overflow: hidden; /* Evita el desbordamiento del contenido */
 }
 
 .container {
@@ -82,8 +83,17 @@ body {
     max-width: 400px;
     width: 100%;
     position: relative;
-    overflow: hidden; /* Añadido para evitar el desbordamiento */
-    max-height: 80vh;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    max-height: 80vh; /* Asegura que el contenedor no sea demasiado alto */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del alto total */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        max-height: 90vh; /* Ajusta la altura máxima para pantallas pequeñas */
+        padding: 10px; /* Añade un poco de padding para mejorar el diseño en pantallas pequeñas */
+    }
 }
 
 .logo img {
@@ -129,6 +139,7 @@ p.welcome-message {
 /* Fila de iconos */
 .icon-row {
     display: flex;
+    flex-wrap: wrap; /* Permite que los iconos se ajusten en múltiples líneas si es necesario */
     justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
@@ -191,7 +202,6 @@ p.welcome-message {
     transform: scale(1.05); /* Asegúrate de que la escala sea menor a 1.05 si es necesario */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Estilos específicos para cada tipo de enlace */
 .link.facebook { background-color: #3b5998; }
