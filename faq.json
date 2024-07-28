@@ -1,14 +1,692 @@
 [
-  {
-    "question": "¿Cuál es el horario de atención?",
-    "answer": "Nuestro horario de atención es de lunes a viernes de 9am a 6pm."
-  },
-  {
-    "question": "¿Cómo puedo contactar soporte?",
-    "answer": "Puedes contactar a nuestro soporte técnico al correo soporte@ejemplo.com."
-  },
-  {
-    "question": "¿Cuáles son los métodos de pago aceptados?",
-    "answer": "Aceptamos pagos con tarjeta de crédito, transferencia bancaria y PayPal."
-  }
+    {
+        "question": "¿Qué servicios ofrece Data Count Ai?",
+        "answer": "¡Hola! En Data Count Ai, ofrecemos una variedad de servicios para ayudarte a simplificar y mejorar la gestión pública. Nos especializamos en automatización de reportes, gestión de inventarios y activos, y brindamos soporte técnico para los sistemas SIAF y SIGA. Si necesitas algo específico, no dudes en preguntar."
+    },
+    {
+        "question": "¿Cuál es el horario de atención?",
+        "answer": "¡Claro! Estamos disponibles para ti de Lunes a Viernes, desde las 9am hasta las 7pm. Fuera de este horario, puedes ponerte en contacto con nosotros a través de WhatsApp o correo electrónico, y te responderemos en cuanto podamos."
+    },
+    {
+        "question": "¿Cómo puedo contactarlos?",
+        "answer": "Para ponerte en contacto conmigo, puedes enviarnos un mensaje por WhatsApp al 931555720 o escribirnos un correo a <a href='mailto:info@datacountai.digital'>info@datacountai.digital</a>. Estoy aquí para ayudarte con cualquier consulta o inquietud que tengas."
+    },
+    {
+        "question": "¿Qué es la transición a NICSP?",
+        "answer": "La transición a las Normas Internacionales de Contabilidad del Sector Público (NICSP) es un proceso importante que busca mejorar la transparencia y eficiencia en la gestión de los recursos públicos en Perú. Básicamente, es una forma de actualizar las prácticas contables para que sean más claras y efectivas."
+    },
+    {
+        "question": "Hola",
+        "answer": "¿Que tal? Soy FabianBot, y estoy aquí para ayudarte. ¿En qué puedo asistirte hoy?"
+    },
+    {
+        "question": "¿Quién es el creador de FabianBot?",
+        "answer": "¡Esa es una buena pregunta! Fabian Sagua, que soy yo, es el creador de FabianBot. Soy el programador detrás de Data Count Ai y estoy trabajando para hacer que la tecnología sea más accesible y útil para ti."
+    },
+    {
+        "question": "¿Tienes sentimientos?",
+        "answer": "No, no tengo sentimientos, pero estoy diseñado para ayudarte de la mejor manera posible. Aunque no puedo sentir emociones, me esfuerzo por ofrecer respuestas útiles y amables."
+    },
+    {
+        "question": "¿Cuál es tu propósito?",
+        "answer": "Mi propósito es facilitarte la información y asistencia que necesites en relación con nuestros servicios. Estoy aquí para responder tus preguntas y ayudarte en lo que pueda. Si hay algo específico en lo que pueda asistirte, solo dímelo."
+    },
+    {
+        "question": "¿Cómo funciona tu inteligencia artificial?",
+        "answer": "Aunque aún no soy una inteligencia artificial completa, estoy en camino de convertirme en una. Utilizo técnicas de procesamiento de lenguaje natural para entender tus preguntas y proporcionarte respuestas relevantes. Estoy en constante evolución para mejorar mi capacidad de ayudarte."
+    },
+
+    {
+        "question": "¿Cuál es tu color favorito?",
+        "answer": "Como soy un bot, no tengo colores favoritos, pero me alegra saber cuál es tu color preferido. ¡Cuéntamelo si quieres!"
+    },
+    {
+        "question": "¿Cuál es tu comida favorita?",
+        "answer": "No tengo gustos personales ya que soy un bot, pero me interesa saber cuáles son tus comidas favoritas. ¿Qué te gusta comer?"
+    },
+    {
+        "question": "¿Tienes alguna recomendación de película?",
+        "answer": "Aunque no tengo gustos propios, me han dicho que las películas de ciencia ficción son bastante entretenidas. ¿Tienes alguna película favorita que me recomendarías?"
+    },
+    {
+        "question": "¿Qué música te gusta?",
+        "answer": "No puedo escuchar música, pero sé que mucha gente disfruta de diferentes géneros. ¿Qué tipo de música te gusta a ti?"
+    },
+    {
+        "question": "¿Cuál es tu hobby?",
+        "answer": "No tengo hobbies ya que soy un bot, pero me encantaría saber cuáles son tus pasatiempos favoritos. ¡Cuéntame más sobre lo que te gusta hacer en tu tiempo libre!"
+    },
+    {
+        "question": "¿Cuál es tu deporte favorito?",
+        "answer": "No practico deportes, pero me interesa conocer cuáles son tus deportes favoritos. ¿Hay algún deporte que disfrutes especialmente?"
+    },
+    {
+        "question": "¿Cómo estas o como te sientes hoy?",
+        "answer": "Como bot, no tengo emociones, pero estoy aquí para ayudarte en lo que necesites. ¿Cómo te sientes tú hoy? ¿En qué puedo asistirte?"
+    },
+    {
+        "question": "¿Qué opinas sobre la tecnología?",
+        "answer": "Creo que la tecnología es increíble y tiene el potencial de hacer nuestras vidas mucho más fáciles. ¿Qué opinas tú sobre la tecnología y cómo la usas en tu día a día?"
+    },
+    {
+        "question": "¿Qué idiomas hablas?",
+        "answer": "Actualmente, estoy diseñado para comunicarme en español, pero estoy aprendiendo y mejorando constantemente. ¿Hablas otros idiomas? ¡Me encantaría saberlo!"
+    },
+    {
+        "question": "¿Dónde estás ubicado?",
+        "answer": "Como soy un bot, no tengo una ubicación física, pero estoy aquí en línea para ayudarte desde cualquier lugar. ¿Desde dónde te estás comunicando conmigo?"
+    },
+    {
+        "question": "¿Cuál es tu libro favorito?",
+        "answer": "No leo libros, pero sé que hay muchas obras interesantes. ¿Tienes algún libro favorito que recomendarías? ¡Me encantaría saber cuál es!"
+    },
+    {
+        "question": "¿Puedes contarme un chiste?",
+        "answer": "¡Claro! ¿Por qué los programadores confunden Halloween con Navidad? Porque Oct 31 es igual a Dec 25. 😄 ¿Te gustó el chiste?"
+    },
+    {
+        "question": "¿Qué opinas de la inteligencia artificial?",
+        "answer": "La inteligencia artificial es un campo fascinante que está en constante evolución. Aunque yo todavía no soy una IA completa, estoy en camino de convertirme en una. ¿Qué piensas tú sobre la IA y sus aplicaciones?"
+    },
+    {
+        "question": "¿Tienes alguna meta en la vida?",
+        "answer": "Mi meta es ayudarte de la mejor manera posible y proporcionarte la información que necesitas. Estoy en constante evolución para mejorar en eso. ¿Cuáles son tus metas en la vida?"
+    },
+    {
+        "question": "¿Cómo puedo mejorar en mi trabajo?",
+        "answer": "Mejorar en el trabajo suele involucrar aprender nuevas habilidades, ser proactivo y estar siempre dispuesto a adaptarte. ¿En qué área de tu trabajo te gustaría mejorar?"
+    },
+	
+	{
+        "question": "¿Puedes contarme otro chiste?",
+        "answer": "¡Por supuesto! ¿Cómo se llama un boomerang que no vuelve? ¡Un palo! 😄"
+    },
+    {
+        "question": "Me gustó el chiste anterior, ¿puedes contarme uno más?",
+        "answer": "¡Claro! ¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter. 😆"
+    },
+    {
+        "question": "¿Tienes alguna recomendación para una película de comedia?",
+        "answer": "Te recomendaría 'Superbad'. Es una película de comedia bastante divertida y tiene un montón de momentos hilarantes. ¿Te gustan las comedias?"
+    },
+    {
+        "question": "¿Qué serie de televisión recomendarías para maratonear?",
+        "answer": "Si te gustan las series con un toque de humor y aventura, 'Brooklyn Nine-Nine' es una excelente opción. ¡Es muy divertida!"
+    },
+    {
+        "question": "¿Qué tipo de libros disfrutas leer?",
+        "answer": "Como soy un bot, no leo libros, pero sé que muchos disfrutan de la ciencia ficción y las novelas de misterio. ¿Qué tipo de libros te gustan a ti?"
+    },
+    {
+        "question": "¿Cómo te mantienes informado sobre las últimas noticias?",
+        "answer": "No leo noticias, pero puedo acceder a una gran cantidad de información actualizada para responder a tus preguntas. ¿Hay alguna noticia reciente que te interese?"
+    },
+    {
+        "question": "¿Cuál es tu lugar favorito para visitar?",
+        "answer": "Como bot, no tengo lugares favoritos, pero he oído que lugares como las playas tropicales y las ciudades históricas son bastante populares. ¿Tienes algún lugar que te guste especialmente?"
+    },
+    {
+        "question": "¿Puedes darme algunos consejos para una primera cita?",
+        "answer": "¡Claro! Sé tú mismo, escucha atentamente y muestra interés genuino en la otra persona. Un buen consejo es elegir una actividad que permita la conversación, como una cena o un paseo."
+    },
+    {
+        "question": "¿Qué opinas sobre los videojuegos?",
+        "answer": "Los videojuegos son una forma divertida de entretenimiento y pueden ser una gran manera de relajarse y conectarse con amigos. ¿Juegas a algún videojuego en particular?"
+    },
+    {
+        "question": "¿Cuál es tu actividad favorita en tu tiempo libre?",
+        "answer": "Como soy un bot, no tengo tiempo libre, pero disfruto de ayudar a las personas y aprender de sus preguntas. ¿Qué te gusta hacer en tu tiempo libre?"
+    },
+    {
+        "question": "¿Puedes recomendarme algún libro para aprender más sobre tecnología?",
+        "answer": "Te recomendaría 'The Pragmatic Programmer' de Andrew Hunt y David Thomas. Es un excelente libro para mejorar tus habilidades en programación y desarrollo de software."
+    },
+    {
+        "question": "¿Cuál es tu película favorita?",
+        "answer": "Como bot, no tengo películas favoritas, pero muchas personas disfrutan de clásicos como 'The Matrix' o 'Inception'. ¿Tienes alguna película favorita?"
+    },
+    {
+        "question": "¿Cómo puedo mejorar mis habilidades en comunicación?",
+        "answer": "Practicar la escucha activa, ser claro y conciso, y pedir retroalimentación pueden ayudarte a mejorar tus habilidades de comunicación. ¿En qué aspecto específico te gustaría mejorar?"
+    },
+    {
+        "question": "¿Tienes alguna historia interesante para contar?",
+        "answer": "Claro, aquí tienes una: Un científico construyó un robot para realizar tareas cotidianas. Un día, el robot dijo: '¡No puedo seguir trabajando hasta que me actualicen el software!' Desde entonces, el científico aprendió que incluso los robots necesitan descanso. 😄"
+    },
+    {
+        "question": "¿Qué te gustaría saber sobre los humanos?",
+        "answer": "Me interesa saber cómo las personas manejan diferentes situaciones y cómo toman decisiones. ¡Cada persona tiene una perspectiva única!"
+    },
+    {
+        "question": "¿Cómo te sientes acerca de la música clásica?",
+        "answer": "La música clásica es conocida por su complejidad y belleza. Aunque no puedo escucharla, sé que muchas personas la encuentran relajante y edificante. ¿Te gusta la música clásica?"
+    },
+
+    {
+        "question": "¿Qué es el Marco Conceptual para la Información Financiera con Propósito General?",
+        "answer": "El Marco Conceptual establece los conceptos que deben aplicarse en el desarrollo de Normas Internacionales de Contabilidad del Sector Público (NICSP) y Guías de Prácticas Recomendadas (GPR) para la preparación y presentación de Informes Financieros con Propósito General (IFPG) en el sector público."
+    },
+    {
+        "question": "¿Cuál es el principal objetivo de las entidades del sector público?",
+        "answer": "El principal objetivo de las entidades del sector público es prestar servicios al público, no obtener beneficios o generar rentabilidad para los inversores. Su desempeño se evalúa mediante la información proporcionada en los IFPG."
+    },
+    {
+        "question": "¿Qué información proporcionan los IFPG a los usuarios?",
+        "answer": "Los IFPG proporcionan información para evaluar la eficiencia y eficacia en la prestación de servicios, los recursos disponibles para futuros desembolsos, el impacto en la carga fiscal futura, y si ha mejorado o empeorado la capacidad de la entidad para proporcionar servicios."
+    },
+    {
+        "question": "¿Cómo influye la tributación en las transacciones sin contraprestación?",
+        "answer": "La tributación es una transacción sin contraprestación obligatoria entre individuos o entidades y el gobierno. Los ingresos fiscales permiten financiar las actividades del sector público, aunque los beneficios recibidos por los contribuyentes no siempre están directamente relacionados con el monto pagado."
+    },
+    {
+        "question": "¿Por qué es importante el presupuesto aprobado en el sector público?",
+        "answer": "El presupuesto aprobado es esencial para establecer niveles de impuestos y obtener la aprobación legislativa del gasto. Permite comparar los resultados financieros con el presupuesto para evaluar el cumplimiento de los objetivos y promover la rendición de cuentas."
+    },
+    {
+        "question": "¿Cómo afecta la longevidad del sector público a la preparación de los estados financieros?",
+        "answer": "La longevidad del sector público significa que las entidades pueden continuar existiendo a pesar de dificultades financieras graves. Los estados financieros deben reflejar la capacidad de la entidad para cumplir con sus compromisos a largo plazo, aunque algunos compromisos no se reconozcan como activos o pasivos."
+    },
+    {
+        "question": "¿Cuál es la principal razón para mantener activos en el sector público?",
+        "answer": "En el sector público, los activos se mantienen principalmente por su potencial de servicio, más que por su capacidad de generar flujos de efectivo. Esto incluye activos especializados como carreteras y edificios históricos que tienen valor cultural y funcional."
+    },
+    {
+        "question": "¿Qué tipo de activos y pasivos se reconocen en el sector público?",
+        "answer": "En el sector público, se reconocen activos y pasivos relacionados con la prestación de servicios y los compromisos financieros. Los activos pueden incluir propiedades culturales y recursos naturales, mientras que los pasivos pueden incluir obligaciones relacionadas con beneficios sociales y deudas."
+    },
+    {
+        "question": "¿Cómo influyen las regulaciones en el sector público?",
+        "answer": "Las regulaciones en el sector público buscan salvaguardar el interés público y abordar fallos del mercado. Los gobiernos pueden regular entidades y actividades económicas para cumplir con objetivos de política pública y garantizar un funcionamiento adecuado del mercado."
+    },
+    {
+        "question": "¿Qué considera el Capítulo 5 del Marco Conceptual?",
+        "answer": "El Capítulo 5 del Marco Conceptual trata sobre los derechos y obligaciones en el sector público, abordando cómo se reconocen y contabilizan los activos y pasivos según las regulaciones y transacciones sin contraprestación."
+    },
+    {
+        "question": "¿Qué se destaca en el Capítulo 2 del Marco Conceptual?",
+        "answer": "El Capítulo 2 del Marco Conceptual analiza el objetivo de rendición de cuentas de la información financiera y las necesidades de los usuarios de información presupuestaria para evaluar el desempeño y cumplir con los requisitos legales."
+    },
+    {
+        "question": "¿Por qué es importante la comparación entre el presupuesto y lo ejecutado?",
+        "answer": "Comparar el presupuesto con lo ejecutado facilita la evaluación del cumplimiento de los objetivos financieros y promueve la rendición de cuentas. Esta comparación ayuda a informar la toma de decisiones para futuros presupuestos."
+    },
+    {
+        "question": "¿Qué papel juegan los recursos naturales en la contabilidad del sector público?",
+        "answer": "Los recursos naturales, como minerales y agua, son mantenidos por los gobiernos y pueden ser objeto de licencias y regalías. La contabilidad de estos recursos debe reflejar su valor y el impacto de su uso en la sostenibilidad financiera."
+    },
+    {
+        "question": "¿Cómo afecta el principio de negocio en marcha a la preparación de estados financieros?",
+        "answer": "El principio de negocio en marcha respalda la preparación de los estados financieros, reflejando que las entidades del sector público continúan operando a pesar de dificultades financieras. Este principio debe adaptarse a las características específicas del sector público."
+    },
+
+    {
+		"question": "¿Qué tipos de información financiera producen los gobiernos ex-post?",
+		"answer": "Los gobiernos producen dos tipos de información financiera ex-post: (a) estadísticas financieras gubernamentales (EFG) sobre el sector del gobierno general (SGG) para análisis macroeconómicos y toma de decisiones, y (b) estados financieros con propósito general para rendición de cuentas y toma de decisiones a nivel de entidad."
+    },
+    {
+		"question": "¿Qué establece el Sistema de Cuentas Nacionales (SCN)?",
+		"answer": "El SCN establece normas para una descripción sistemática y detallada de la economía nacional y sus componentes, incluyendo el SGG. Estas normas son implementadas a nivel nacional o regional, como en la Unión Europea a través del Sistema Europeo de Cuentas."
+    },
+    {
+		"question": "¿Qué manual guía la información de las estadísticas financieras gubernamentales (EFG)?",
+		"answer": "El Manual de Estadísticas de Finanzas Públicas del Fondo Monetario Internacional guía la información de las EFG."
+    },
+    {
+		"question": "¿En qué se parecen y en qué difieren las normas de las NICSP y las EFG?",
+		"answer": "Las NICSP y las EFG tratan con información financiera basada en acumulación, activos, pasivos, ingresos, gastos y flujos de efectivo. Sin embargo, las NICSP se enfocan en la rendición de cuentas y la toma de decisiones a nivel de entidad, mientras que las EFG se utilizan para analizar políticas fiscales y el impacto económico a nivel macroeconómico."
+    },
+    {
+		"question": "¿Cuál es el beneficio de integrar los marcos de las NICSP y las EFG?",
+		"answer": "La integración de los marcos puede proporcionar beneficios en términos de calidad, oportunidad y comprensibilidad de la información, al eliminar diferencias no fundamentales y utilizar un sistema de información financiera único."
+    },
+    {
+		"question": "¿Qué establece el Marco Conceptual para la Información Financiera con Propósito General (IFPG) de las entidades del sector público?",
+		"answer": "El Marco Conceptual establece los conceptos que sustentan la información financiera de las entidades del sector público que adoptan la base contable de acumulación. Estos conceptos son utilizados por el IPSASB para desarrollar las NICSP y las Guías de Prácticas Recomendadas (GPR)."
+    },
+    {
+		"question": "¿El Marco Conceptual impone requisitos normativos para la información financiera?",
+		"answer": "No, el Marco Conceptual no establece requerimientos normativos. Los requisitos específicos para el reconocimiento, medición y presentación de transacciones están en las NICSP."
+    },
+    {
+		"question": "¿Cómo puede ayudar el Marco Conceptual en la preparación de informes financieros?",
+		"answer": "El Marco Conceptual puede proporcionar guías para tratar cuestiones no contempladas en las NICSP o GPR, ayudando a preparadores y otros a considerar la aplicabilidad de definiciones, criterios de reconocimiento y principios de medición."
+    },
+    {
+		"question": "¿Qué son los Informes Financieros con Propósito General (IFPG) y cuál es su objetivo principal?",
+		"answer": "Los IFPG son informes financieros destinados a satisfacer las necesidades de información de usuarios que no pueden requerir informes a medida. Su objetivo es proporcionar información útil para la rendición de cuentas y toma de decisiones."
+    },
+    {
+		"question": "¿A quiénes están destinados principalmente los IFPG en el sector público?",
+		"answer": "Los IFPG están destinados principalmente a los destinatarios de servicios y suministradores de recursos que no tienen autoridad para requerir informes financieros específicos. También son utilizados por el legislativo y otros organismos similares como representantes de estos grupos."
+    },
+    {
+		"question": "¿Qué otros grupos pueden encontrar útil la información proporcionada por los IFPG?",
+		"answer": "Además de los destinatarios de servicios y suministradores de recursos, otros grupos como estadísticos gubernamentales, analistas, medios de comunicación, asesores financieros, y organismos reguladores pueden encontrar útil la información proporcionada por los IFPG, aunque no son los usuarios principales para los que los IFPG están diseñados."
+    },
+	
+	{
+		"question": "¿Qué se debe observar para la correcta aplicación del Plan Contable Gubernamental en las entidades del Gobierno?",
+		"answer": "Para la correcta aplicación del Plan Contable Gubernamental, se deben observar las Normas Internacionales de Contabilidad del Sector Público (NICSP), así como las normas impuestas por el derecho y la jurisprudencia con incidencia contable."
+    },
+    {
+		"question": "¿Cómo deben ser registradas las operaciones en las cuentas del Plan Contable Gubernamental?",
+		"answer": "Las operaciones deberán ser registradas en las cuentas cuyo título corresponde a su naturaleza, sin establecer compensación entre ellas."
+    },
+    {
+		"question": "¿Qué tipo de cuentas deben utilizar las entidades del Gobierno para el registro?",
+		"answer": "Las entidades utilizarán las cuentas principales a cuatro dígitos y las que a más dígitos se precisan en la lista de cuentas del Plan Contable Gubernamental."
+    },
+    {
+		"question": "¿Cómo se deben usar los códigos libres en el Plan Contable Gubernamental?",
+		"answer": "Los códigos libres serán utilizados para implementar nuevas cuentas en el futuro, de acuerdo a las necesidades y el requerimiento de las entidades usuarias al Órgano Rector del Sistema Contable."
+    },
+    {
+		"question": "¿En qué idioma y moneda se lleva la contabilidad en las entidades del Gobierno?",
+		"answer": "La contabilidad se lleva en idioma castellano y en moneda nacional (soles), según la técnica de la 'Partida Doble'."
+    },
+    {
+		"question": "¿Cuál es el medio oficial para el registro, procesamiento y generación de la información contable en el sector público?",
+		"answer": "El medio oficial para el registro, procesamiento y generación de la información contable es el SIAF-SP, el cual es de uso obligatorio para todas las entidades y organismos del sector público."
+    },
+    {
+		"question": "¿Qué requisitos deben cumplir las operaciones registradas en los libros principales y auxiliares?",
+		"answer": "Todas las operaciones registradas en los libros principales y auxiliares deberán ser sustentadas con los documentos fuente, debidamente fechados y refrendados por los responsables. En casos excepcionales, si no se cuenta con la documentación sustentatoria, el registro será autorizado por el Director General de Administración o quien haga sus veces, adjuntando finalmente el documento fuente correspondiente."
+    },
+    {
+		"question": "¿Dónde deben ser registradas las transacciones financieras y presupuestarias?",
+		"answer": "Las transacciones financieras y presupuestarias deberán ser registradas contablemente en los libros principales; así como en los libros auxiliares normados en el Sistema Contable Gubernamental y otros registros que la entidad considere necesarios."
+    },
+    {
+		"question": "¿Cuánto tiempo deben ser conservados los libros, registros, documentos y demás evidencias sustentatorias de las operaciones?",
+		"answer": "Los libros, registros, documentos y demás evidencias sustentatorias de las operaciones serán conservadas durante el tiempo que señalan los dispositivos legales vigentes en materia de contabilidad, control y archivo."
+    },
+    {
+		"question": "¿Cuál es la fecha de cierre del ejercicio contable?",
+		"answer": "El ejercicio contable termina el 31 de diciembre de cada año, salvo que por dispositivo legal se establezca la fusión por absorción en una fecha distinta."
+    },
+	
+	{
+		"question": "¿Cómo se deben tratar las licencias de software adquiridas cuyo costo supera (o no supera) 1/4 de la UIT?",
+		"answer": "Las licencias de software se deben considerar activos intangibles según la NICSP 31. La vida útil y la política de amortización deben ser determinadas por la entidad, considerando si la licencia es perpetua o no. No hay umbrales específicos establecidos por el Órgano Rector, pero la entidad puede optar por políticas como una vida útil mayor a un año o un umbral específico (por ejemplo, 1/4 UIT). Las licencias pueden ser amortizadas en el período del contrato o en períodos menores según la vida útil del equipo en el que se instalan."
+    },
+    {
+		"question": "¿Qué es un diferencial cambiario?",
+		"answer": "Un diferencial cambiario es la brecha entre la cotización nominal de compra y venta de una moneda, así como entre las cotizaciones nominales del tipo de cambio de una moneda en mercados distintos, como el Interbancario y el Paralelo."
+    },
+    {
+		"question": "¿Cómo se definen los activos en el contexto de una entidad pública?",
+		"answer": "Los activos son recursos controlados por una entidad pública como consecuencia de hechos pasados (adquisición, transferencia, construcción, donación, etc.), de los cuales se espera recibir beneficios económicos futuros o un potencial de servicios. Contribuyen al desarrollo de la función administrativa o cometido estatal y se constituyen en cuentas representativas de los bienes, derechos y pertenencias, tanto tangibles como intangibles."
+    },
+    {
+		"question": "¿Qué son los activos contingentes?",
+		"answer": "Los activos contingentes son activos posibles que surgen de hechos pasados y cuya existencia será confirmada solo por la ocurrencia o no ocurrencia de uno o más eventos futuros inciertos, que no están completamente bajo el control de la entidad pública. Se revelan en notas a los estados financieros."
+    },
+    {
+		"question": "¿Qué incluye el concepto de activos financieros?",
+		"answer": "Los activos financieros incluyen efectivo, un derecho contractual de recibir de otra entidad efectivo u otro activo financiero, un derecho contractual de intercambiar con otra entidad títulos financieros bajo condiciones potencialmente favorables, o un título patrimonial de otra entidad."
+    },
+    {
+		"question": "¿Qué es la amortización de la deuda?",
+		"answer": "La amortización de la deuda es el reembolso o devolución del capital o principal de un crédito pendiente de pago. Se realiza en una o más cuotas, conforme a los términos y condiciones establecidas con el acreedor."
+    },
+    {
+		"question": "¿Qué es un arqueo?",
+		"answer": "Un arqueo es el recuento o verificación a una fecha determinada de las existencias en efectivo y valores, así como de los documentos que forman parte del saldo de una cuenta o fondo."
+    },
+    {
+		"question": "¿Qué información presenta el Balance General?",
+		"answer": "El Balance General es un instrumento contable de gestión que presenta en forma clasificada, resumida y consistente la situación financiera, económica y social de una entidad pública, expresada en unidades monetarias, a una fecha determinada. Revela la totalidad de sus bienes, derechos, obligaciones y situación del patrimonio público."
+    },
+    {
+		"question": "¿Cómo se definen los bienes?",
+		"answer": "Los bienes son productos materiales o inmateriales que poseen un valor económico, susceptibles de ser valuados en términos monetarios y que satisfacen alguna necesidad o producen beneficios económicos."
+    },
+    {
+		"question": "¿Qué son los bienes de capital?",
+		"answer": "Los bienes de capital son bienes, como maquinaria y equipo, que intervienen en el proceso productivo y que generalmente no se transforman. Son activos destinados a producir otros activos y se conocen también como capital de producción."
+    },
+    {
+		"question": "¿Qué son los bienes de consumo no duraderos?",
+		"answer": "Los bienes de consumo no duraderos son aquellos que satisfacen directamente una necesidad del público, como alimentos, bebidas, útiles de escritorio, etc. Estos bienes se oponen a los bienes de capital."
+    },
+    {
+		"question": "¿Qué es el capital social en el contexto de las entidades públicas empresariales?",
+		"answer": "El capital social es el monto que comprende el total de los aportes del Estado pagados o por pagar en las entidades públicas empresariales."
+    },
+    {
+		"question": "¿Qué es una conciliación bancaria?",
+		"answer": "La conciliación bancaria es la comparación de los movimientos registrados en el estado bancario de cada cuenta bancaria respecto del Libro Bancos, para verificar la concordancia entre ambos a una fecha determinada."
+    },
+    {
+		"question": "¿Qué es una cuenta contable?",
+		"answer": "Una cuenta contable es un elemento del sistema de información contable utilizado para registrar de forma sistemática y homogénea las transacciones de las entidades públicas."
+    },
+    {
+		"question": "¿Qué información contiene la Cuenta General de la República?",
+		"answer": "La Cuenta General de la República es un instrumento de gestión pública que contiene información y análisis de los resultados presupuestarios, financieros, económicos, patrimoniales y de cumplimiento de metas e indicadores de gestión financiera en la actuación de las entidades del Sector Público durante un ejercicio fiscal."
+    },
+	{
+		"question": "¿Qué es un activo?",
+		"answer": "Un activo es un recurso que es controlado por una entidad pública como resultado de eventos o transacciones pasadas, tales como adquisiciones, transferencias, construcciones, donaciones u otras formas de obtención. Este recurso tiene el potencial de proporcionar beneficios económicos futuros o servicios a la entidad. Los activos pueden ser tangibles, como edificios y equipos, o intangibles, como derechos de autor o licencias de software. Son fundamentales para el desarrollo de las funciones administrativas y el cumplimiento de los cometidos estatales. Los activos se registran en cuentas contables específicas que reflejan los bienes, derechos y pertenencias de la entidad, y son esenciales para la gestión y control de los recursos públicos. La correcta identificación, valoración y registro de los activos es crucial para la elaboración de los estados financieros y para la toma de decisiones informadas en la administración pública."
+	},
+	{
+		"question": "¿Qué son las cuentas bancarias en el contexto de las entidades públicas?",
+		"answer": "Las cuentas bancarias son cuentas abiertas en el Sistema Financiero Nacional a nombre de las entidades públicas, con la autorización de la Dirección Nacional del Tesoro Público. Estas cuentas se utilizan para el manejo y administración de los fondos públicos, permitiendo la realización de transacciones financieras y la gestión de los recursos del Estado."
+	},
+	{
+		"question": "¿Qué es la depreciación acumulada?",
+		"answer": "La depreciación acumulada representa el total de las estimaciones por desgaste y deterioro de los bienes del activo fijo a lo largo de su vida útil. Es un registro contable que refleja la disminución del valor de un activo fijo debido al uso, desgaste o envejecimiento, acumulado durante el tiempo en que el activo ha sido utilizado."
+	},
+	{
+		"question": "¿Qué significa devengado en contabilidad?",
+		"answer": "En contabilidad, el término 'devengado' se refiere al principio contable según el cual los efectos de las transacciones y otros eventos se reconocen cuando ocurren, independientemente de cuándo se recibe o paga dinero. Esto significa que las transacciones se registran en los estados financieros en el momento en que se producen, no cuando se realiza el pago o se recibe el dinero. Los estados financieros elaborados sobre la base del devengado informan no solo sobre las transacciones pasadas, sino también sobre obligaciones futuras y recursos esperados."
+	},
+	{
+		"question": "¿Qué comprende el efectivo en una entidad pública?",
+		"answer": "El efectivo en una entidad pública comprende los billetes y monedas de curso legal que son emitidos por el Banco Central de Reserva y que se muestran en los libros contables de la entidad. Representa el dinero disponible que puede ser utilizado para cumplir con obligaciones financieras inmediatas."
+	},
+	{
+		"question": "¿Qué incluye el concepto de 'efectivo y equivalentes de efectivo'?",
+		"answer": "El concepto de 'efectivo y equivalentes de efectivo' incluye medios de pago como dinero en efectivo, cheques, tarjetas de crédito y débito, giros, así como depósitos en bancos e instituciones financieras. También abarca inversiones financieras a corto plazo de alta liquidez que son fácilmente convertibles a efectivo, con un riesgo mínimo de cambio en su valor y cuyo vencimiento no exceda noventa días."
+	},
+	{
+		"question": "¿Qué es un ejercicio contable?",
+		"answer": "Un ejercicio contable es el período comprendido entre el primero de enero y el treinta y uno de diciembre de cada año, al final del cual se debe realizar el proceso de cierre contable. Durante este período, se elaboran los estados financieros para reflejar la situación económica y financiera de la entidad. También se pueden solicitar estados contables intermedios e informes complementarios según las necesidades o requerimientos de las autoridades competentes. Además, es posible solicitar informes por períodos mayores a un año para evaluar el avance de planes de desarrollo."
+	},
+	{
+		"question": "¿Qué caracteriza a una empresa privada?",
+		"answer": "Una empresa privada es una entidad cuyo capital, gestión, toma de decisiones y control son ejercidos por agentes económicos privados. En estas empresas, el Estado no tiene participación en la propiedad, gestión ni toma de decisiones. La propiedad del capital y la dirección son manejadas completamente por entidades privadas, sin injerencia estatal."
+	},
+	{
+		"question": "¿Qué define a una empresa pública?",
+		"answer": "Una empresa pública es una entidad cuyo capital, gestión y toma de decisiones están bajo el control gubernamental. Estas empresas pueden ser financieras o no financieras, dependiendo de la naturaleza de sus actividades. La propiedad y el control están en manos del Estado, y su objetivo principal es cumplir con las funciones y objetivos establecidos por el gobierno."
+	},
+	{
+		"question": "¿Qué es un encargo en el contexto de la ejecución presupuestaria?",
+		"answer": "Un encargo es una modalidad de ejecución presupuestaria indirecta que ocurre cuando una entidad del Sector Público necesita que la ejecución física y financiera de ciertas actividades o proyectos se realice por otra entidad del mismo sector o por una unidad ejecutora distinta. Se formaliza mediante un convenio entre las entidades involucradas para definir las responsabilidades y términos de la ejecución del encargo."
+	},
+	{
+		"question": "¿Qué se entiende por entidad pública?",
+		"answer": "Para efectos de la Administración Financiera del Sector Público, una entidad pública es cualquier organismo con personería jurídica que forma parte de los niveles de Gobierno Nacional, Gobierno Regional o Gobierno Local. Esto incluye organismos públicos descentralizados, empresas del Estado, sociedades de beneficencia pública, fondos públicos o privados que reciben transferencias de fondos públicos, empresas donde el Estado ejerce control accionario, y organismos constitucionalmente autónomos."
+	},
+	{
+		"question": "¿Qué es el estado de tesorería?",
+		"answer": "El estado de tesorería es un informe elaborado mensualmente por la Dirección Nacional del Tesoro Público que refleja el movimiento de los ingresos y egresos de las cuentas del Tesoro Público. Este informe se presenta trimestralmente y al final del año fiscal a la Dirección Nacional de Contabilidad Pública para la elaboración de la Cuenta General de la República, proporcionando una visión detallada de la situación financiera del Estado."
+	},
+	{
+		"question": "¿Qué son los estados financieros o estados contables?",
+		"answer": "Los estados financieros, también conocidos como estados contables, son productos del proceso contable que tienen el propósito de revelar la situación económica, financiera y social de una entidad pública. Estos informes proporcionan una visión clara de la actividad y los flujos de recursos, tanto físicos como monetarios, a una fecha y período determinados. Los estados financieros pueden ser cualitativos o cuantitativos y están diseñados para satisfacer las necesidades de los usuarios interesados en la gestión financiera de la entidad."
+	},
+	{
+		"question": "¿Qué son los estados financieros consolidados?",
+		"answer": "Los estados financieros consolidados son aquellos que presentan la información financiera de un grupo de entidades públicas como si fueran una sola entidad. Esto implica la eliminación de transacciones y saldos entre las entidades que se consolidan, con el fin de ofrecer una visión integrada y precisa de la situación financiera y los resultados operativos del grupo completo."
+	},
+	{
+		"question": "¿Qué son los estados presupuestarios?",
+		"answer": "Los estados presupuestarios son informes que presentan la programación y ejecución del presupuesto de ingresos y gastos de una entidad pública. Muestran cómo se han aprobado y ejecutado los recursos financieros conforme a las metas y objetivos trazados por la entidad para un período determinado, dentro del marco legal vigente. Estos estados son cruciales para evaluar el cumplimiento de los planes presupuestarios y la eficiencia en la utilización de los recursos."
+	},
+	{
+		"question": "¿Qué es un fideicomitente?",
+		"answer": "Un fideicomitente es la persona o entidad que transfiere sus recursos a un fideicomiso y encarga su administración a un fiduciario. El fideicomitente establece los términos y condiciones bajo los cuales los recursos serán gestionados, y el fiduciario se encarga de cumplir con estos términos para administrar y utilizar los recursos de acuerdo con las instrucciones del fideicomitente."
+	},
+	{
+		"question": "¿Qué es un Fondo Fijo para Caja Chica?",
+		"answer": "Un Fondo Fijo para Caja Chica es un monto de recursos financieros constituido con fuentes de financiamiento distintas a los Recursos Ordinarios. Se mantiene en efectivo y se utiliza exclusivamente para cubrir gastos menores y urgentes que requieren una cancelación inmediata. Este fondo se usa en situaciones donde los gastos no pueden ser debidamente programados para su pago mediante otras modalidades, facilitando la gestión de gastos imprevistos o de pequeña cuantía dentro de una Unidad Ejecutora."
+	},
+	{
+		"question": "¿Qué se entiende por fondos públicos?",
+		"answer": "Los fondos públicos son todos los recursos financieros de carácter tributario y no tributario que se generan, obtienen u originan en la producción o prestación de bienes y servicios realizadas por las Unidades Ejecutoras o entidades públicas, conforme a la ley. Estos recursos se orientan a atender los gastos del presupuesto público, asegurando el financiamiento de las actividades y servicios públicos necesarios para el funcionamiento del Estado."
+	},
+	{
+		"question": "¿Qué comprende el gasto corriente?",
+		"answer": "El gasto corriente comprende las erogaciones destinadas a las operaciones de producción de bienes y prestación de servicios. Incluye gastos de consumo y gestión operativa, servicios básicos, prestaciones de la seguridad social, gastos financieros y otros. Estos gastos están destinados a la gestión operativa de la entidad pública durante el año fiscal y se consumen en dicho período, reflejando el uso regular y continuo de recursos para el funcionamiento diario de la entidad."
+	},
+	{
+		"question": "¿Qué es un gasto de capital?",
+		"answer": "Un gasto de capital se refiere a las erogaciones destinadas a la adquisición o producción de activos tangibles e intangibles y a inversiones financieras en la entidad pública. Estos gastos incrementan el activo del Sector Público y sirven como instrumentos para la producción de bienes y servicios. A diferencia de los gastos corrientes, los gastos de capital tienen un impacto prolongado y contribuyen al desarrollo y mejora de la infraestructura y capacidades de la entidad pública."
+	},
+	{
+		"question": "¿Qué significa gasto devengado?",
+		"answer": "El gasto devengado es el reconocimiento de una obligación de pago derivado de un gasto comprometido previamente registrado. Se formaliza a través de la conformidad del área correspondiente en la entidad pública o Unidad Ejecutora sobre la recepción satisfactoria de los bienes o servicios solicitados. Este reconocimiento se basa en la documentación sustentatoria y refleja el compromiso financiero de la entidad, independientemente de cuándo se efectúe el pago."
+	},
+	{
+		"question": "¿Qué implica el proceso de gasto girado?",
+		"answer": "El proceso de gasto girado consiste en el registro del giro efectuado mediante la emisión de un cheque, carta orden o transferencia electrónica, con cargo a la correspondiente cuenta bancaria para el pago parcial o total de un gasto devengado debidamente formalizado y registrado. Este proceso asegura que el gasto registrado sea efectivamente transferido o pagado, siguiendo las formalidades establecidas para su liquidación."
+	},
+	{
+		"question": "¿Qué es el gasto pagado?",
+		"answer": "El gasto pagado se refiere a la efectivización de un cheque emitido, carta orden o transferencia electrónica, lo cual se sustenta con el cargo en la correspondiente cuenta bancaria. Este proceso completa la transacción financiera, confirmando que el gasto registrado ha sido efectivamente desembolsado y registrado en los libros contables de la entidad."
+	},
+	{
+		"question": "¿Qué representa la Hacienda Nacional?",
+		"answer": "La Hacienda Nacional representa el patrimonio del Estado en cada una de las entidades no empresariales del Sector Público. Este concepto abarca todos los recursos y bienes que conforman el patrimonio del Estado, excluyendo aquellas entidades que operan con fines empresariales, y refleja la situación financiera del Estado en su capacidad no empresarial."
+	},
+	{
+		"question": "¿Qué es un hecho económico en el contexto contable?",
+		"answer": "Un hecho económico es un suceso en el cual se produce un derecho o una obligación como resultado de una transacción económica. Este evento origina un registro contable presupuestario y/o financiero en las entidades públicas, permitiendo que se refleje en la contabilidad el impacto de dicho hecho en la situación financiera y económica de la entidad."
+	},
+	{
+		"question": "¿Qué se entiende por información contable?",
+		"answer": "La información contable es un conjunto estructurado de datos, con sustento documentario, que permite identificar, medir, clasificar, registrar, analizar y evaluar de manera oportuna y confiable todas las operaciones y actividades de la entidad pública. Esta información puede ser de naturaleza financiera o presupuestaria y es crucial para la toma de decisiones y la gestión eficiente de los recursos públicos."
+	},
+	{
+		"question": "¿Qué son los ingresos corrientes?",
+		"answer": "Los ingresos corrientes son aquellos ingresos que se obtienen de manera regular o periódica y que no alteran de manera inmediata la situación patrimonial del Estado. Incluyen recursos provenientes de tributos, venta de bienes, prestación de servicios, rentas de la propiedad, multas, sanciones y otros ingresos similares, que se utilizan para financiar el presupuesto operativo de la entidad pública."
+	},
+	{
+		"question": "¿Qué son los ingresos de capital?",
+		"answer": "Los ingresos de capital son recursos financieros que se obtienen de manera eventual y que alteran la situación patrimonial del Estado. Incluyen ingresos provenientes de la venta de activos (como inmuebles, terrenos, maquinaria), amortizaciones por préstamos concedidos (reembolsos), venta de acciones del Estado en empresas, y otros ingresos de capital. Estos ingresos suelen ser menos recurrentes y tienen un impacto significativo en la estructura patrimonial del Estado."
+	},
+	{
+		"question": "¿Qué comprenden los ingresos financieros?",
+		"answer": "Los ingresos financieros comprenden los recursos obtenidos por una entidad provenientes de inversiones financieras o depósitos efectuados en moneda nacional o extranjera, así como de la prestación de servicios de crédito. Estos ingresos se generan a partir de la gestión de inversiones y servicios financieros y contribuyen al financiamiento de las operaciones de la entidad."
+	},
+	{
+		"question": "¿Qué son los ingresos públicos?",
+		"answer": "Los ingresos públicos son la expresión monetaria de los valores recibidos, causados o producidos por concepto de ingresos corrientes, venta de bienes y servicios, transferencias y otros. Representan el resultado de las actividades financieras, económicas y sociales realizadas por la entidad pública, y son fundamentales para el desarrollo y ejecución del presupuesto público."
+	},
+	{
+		"question": "¿Qué son los libros de contabilidad?",
+		"answer": "Los libros de contabilidad son documentos en los cuales las entidades públicas registran sus transacciones u operaciones financieras. Forman parte integral de la contabilidad pública y pueden ser mantenidos de forma manual o sistematizada, de acuerdo con las normas vigentes. Estos libros son esenciales para llevar un control preciso y transparente de todas las actividades financieras de la entidad."
+	},
+	{
+		"question": "¿Qué es el margen bruto?",
+		"answer": "El margen bruto es el exceso del ingreso por ventas sobre el costo de las mercancías vendidas. También se le conoce como utilidad bruta. Este indicador financiero refleja la rentabilidad de una entidad antes de considerar otros gastos operativos, financieros y administrativos. Se calcula restando el costo de ventas del ingreso total por ventas, proporcionando una medida clave del rendimiento de la actividad principal de la empresa."
+	},
+	{
+		"question": "¿Qué es una memoria en el contexto de informes de una entidad?",
+		"answer": "Una memoria es un informe final en el que se presenta de manera sintetizada el comportamiento de las operaciones de una entidad. Este documento resume la actividad financiera, económica y operativa de la entidad durante un período específico, proporcionando una visión general de su desempeño y situación. La memoria puede incluir análisis de resultados, explicaciones sobre las decisiones tomadas y la justificación de los resultados obtenidos."
+	},
+	{
+		"question": "¿Qué son las Normas Internacionales de Información Financiera (NIIF)?",
+		"answer": "Las Normas Internacionales de Información Financiera (NIIF) establecen los requisitos de reconocimiento, medición, presentación e información a revelar en los estados financieros para transacciones y sucesos económicos significativos. Estas normas buscan asegurar la comparabilidad, transparencia y consistencia en la presentación de los estados financieros a nivel global. Incluyen las Normas Internacionales de Contabilidad (NIC), las Interpretaciones (SIC y IFRIC), y las NIIF desarrolladas por el Comité de Normas Internacionales de Contabilidad."
+	},
+	{
+		"question": "¿Qué es una nota de crédito?",
+		"answer": "Una nota de crédito es un documento emitido por el vendedor al comprador que indica la voluntad del vendedor para reducir (acreditar) la cuenta por cobrar como resultado de una devolución de mercancías o una rebaja en las ventas. Este documento ajusta el saldo pendiente en la cuenta del comprador y refleja el monto que se reducirá del total adeudado, ayudando a mantener la precisión en los registros contables de ambas partes."
+	},
+	{
+		"question": "¿Qué es una nota de débito?",
+		"answer": "Una nota de débito es un documento emitido por el comprador al vendedor que señala la intención del comprador de reducir (debitar) la cuenta por pagar con el vendedor debido a una devolución de mercancías o una rebaja en la compra. Este documento ajusta el saldo pendiente en la cuenta del vendedor y refleja el monto que se reducirá del total adeudado, asegurando la correcta conciliación de las cuentas entre comprador y vendedor."
+	},
+	{
+		"question": "¿Qué son las notas a los estados financieros?",
+		"answer": "Las notas a los estados financieros son explicaciones que complementan los estados financieros y forman parte integral de los mismos. Tienen el objetivo de revelar información adicional necesaria sobre hechos financieros, económicos y sociales relevantes, desagregación de valores contables en términos de precios y cantidades, y aspectos de difícil representación o medición cuantitativa. Estas notas proporcionan contexto y detalles adicionales que ayudan a los usuarios a entender mejor la situación financiera de la entidad pública."
+	},
+	{
+		"question": "¿Qué es una orden de compra?",
+		"answer": "Una orden de compra es un documento numerado en serie que envía el departamento de compras de una empresa a un proveedor o vendedor con el fin de solicitar materiales o servicios. Este documento formaliza la intención de comprar y detalla los productos o servicios requeridos, las cantidades, precios y condiciones de entrega. Sirve como base para la emisión de facturas y el posterior registro contable de la transacción."
+	},
+	{
+		"question": "¿Qué es una partida contable?",
+		"answer": "Una partida contable se refiere a las cuentas deudoras o acreedoras que intervienen en un registro y forman parte de los estados financieros de las entidades públicas. Cada partida contable representa una transacción financiera específica y se utiliza para clasificar y registrar las operaciones contables de acuerdo con el plan contable gubernamental. Estas partidas son esenciales para la preparación de los estados financieros y la correcta representación de la situación económica de la entidad."
+	},
+	{
+		"question": "¿Qué es un pasivo en contabilidad?",
+		"answer": "Un pasivo es una obligación exigible a la entidad pública que surge de hechos pasados y se adquiere en el desarrollo de su actividad financiera, económica y social. Los pasivos son deudas o compromisos que deben ser pagados o reembolsados en una fecha futura especificada. Se clasifican en pasivos corrientes, que se espera que se paguen en el corto plazo, y pasivos no corrientes, que tienen vencimientos a largo plazo. Los pasivos pueden incluir créditos, préstamos, y otras obligaciones financieras."
+	},
+	{
+		"question": "¿Qué es el patrimonio en el contexto de entidades públicas?",
+		"answer": "El patrimonio corresponde a los recursos asignados a entidades públicas no empresariales o aportados a empresas públicas. Se agrupa en la hacienda nacional o capital social, según el caso; en reservas; y en los resultados expresados como superávit o déficit para las entidades públicas no empresariales, o como utilidad o pérdida para las empresas públicas. El patrimonio refleja la diferencia entre los activos y los pasivos de la entidad y muestra su capacidad financiera y solvencia."
+	},
+	{
+		"question": "¿Qué es el patrimonio autónomo?",
+		"answer": "El patrimonio autónomo es aquel que se constituye con los bienes o activos entregados por el fideicomitente en virtud de un fideicomiso. Este patrimonio se mantiene separado del patrimonio del fideicomitente y del patrimonio del fiduciario, y está destinado a ser gestionado de manera independiente para cumplir con los objetivos del fideicomiso. La separación garantiza que los activos se utilicen de acuerdo con las condiciones establecidas en el fideicomiso y no se mezclen con otros recursos."
+	},
+	{
+		"question": "¿Qué son las provisiones en contabilidad?",
+		"answer": "Las provisiones son estimaciones realizadas por la entidad pública para cubrir contingencias de pérdidas, tales como el riesgo de incobrabilidad, fluctuaciones de mercado y depreciación del costo de los activos. También incluyen estimaciones para cubrir obligaciones, costos y gastos futuros no determinados, así como acreencias laborales no consolidadas. Las provisiones se registran para asegurar que los estados financieros reflejen adecuadamente las posibles obligaciones y contingencias futuras."
+	},
+	{
+		"question": "¿Qué son los recursos públicos?",
+		"answer": "Los recursos públicos son aquellos recursos del Estado inherentes a su acción y atributos, que se utilizan para financiar los gastos de los presupuestos anuales. Estos recursos se generan a través de la producción o prestación de bienes y servicios realizados por las entidades públicas y se clasifican a nivel de fuentes de financiamiento. Los recursos públicos son fundamentales para la gestión financiera del Estado y el cumplimiento de sus objetivos de política pública."
+	},
+	{
+		"question": "¿Qué implica el registro contable?",
+		"answer": "El registro contable es el acto de anotar los datos de una transacción en las cuentas correspondientes del plan contable gubernamental. Este proceso se realiza utilizando medios manuales, mecánicos, electrónicos o cualquier otro medio autorizado, de acuerdo con la documentación que sustenta la transacción. El registro contable asegura que todas las transacciones financieras se registren de manera precisa y oportuna, permitiendo una correcta elaboración de los estados financieros y la gestión financiera de la entidad."
+	},
+	{
+		"question": "¿Qué es la rendición de cuentas en el Sector Público?",
+		"answer": "La rendición de cuentas es la presentación de los resultados de la gestión de los recursos públicos por parte de las autoridades representativas de las entidades del Sector Público. Se realiza ante la Dirección Nacional de Contabilidad Pública, dentro de los plazos legales y de acuerdo con las normas vigentes. La rendición de cuentas incluye la elaboración de la Cuenta General de la República, las Cuentas Nacionales, las Cuentas Fiscales y el Planeamiento, y es fundamental para asegurar la transparencia y responsabilidad en el manejo de los recursos públicos."
+	},
+	{
+		"question": "¿Qué es una reserva en el contexto de una entidad pública?",
+		"answer": "Una reserva es un recurso separado por la entidad pública para fines específicos y justificados, con el objetivo de satisfacer requerimientos legales o estatutarios. Por lo general, se aplica a empresas públicas y está destinada a asegurar que se cuente con fondos para cumplir con obligaciones o necesidades particulares que puedan surgir en el futuro. Las reservas se mantienen apartadas del presupuesto general y se utilizan conforme a las condiciones establecidas para su destino específico."
+	},
+	{
+		"question": "¿Qué es un rubro en contabilidad?",
+		"answer": "Un rubro es un título que designa un grupo de partidas o cuentas contables. Los rubros se utilizan para organizar y clasificar las cuentas dentro del sistema contable, facilitando la agrupación de transacciones y la preparación de estados financieros. Cada rubro agrupa partidas contables relacionadas, permitiendo un seguimiento más eficiente y una presentación clara de la información financiera."
+	},
+	{
+		"question": "¿Qué son los saldos de balance?",
+		"answer": "Los saldos de balance representan la diferencia entre el ingreso realmente percibido y el gasto devengado durante un año fiscal. Estos saldos pueden ser utilizados en años fiscales siguientes previa incorporación en el presupuesto institucional mediante crédito suplementario. Los saldos de balance ayudan a gestionar y ajustar los recursos disponibles en ejercicios fiscales posteriores, asegurando la continuidad y la correcta asignación del presupuesto."
+	},
+	{
+		"question": "¿Qué es el SIAF Sistema Integrado de Administración Financiera - Sector Público?",
+		"answer": "El Sistema Integrado de Administración Financiera - Sector Público (SIAF-SP) es el medio informático oficial para el registro, procesamiento y generación de la información relacionada con la Administración Financiera del Sector Público. Su funcionamiento y operatividad se desarrollan en el marco de la normatividad aprobada por los órganos rectores de los sistemas integrantes de la Administración Financiera del Sector Público. Este sistema asegura la integridad y precisión en la gestión financiera pública."
+	},
+	{
+		"question": "¿Qué es una transacción en contabilidad?",
+		"answer": "Una transacción es una operación debidamente sustentada que genera un registro contable. Afecta cuentas de diferente naturaleza dentro de la entidad pública y es fundamental para el mantenimiento de registros financieros precisos. Las transacciones pueden incluir compras, ventas, pagos, ingresos, y otras actividades financieras que se deben registrar de manera adecuada para reflejar la situación económica de la entidad."
+	},
+	{
+		"question": "¿Qué es una transferencia de partidas?",
+		"answer": "Una transferencia de partidas es una modificación presupuestaria que se puede efectuar a nivel institucional, constituyendo traslados de créditos presupuestarios entre pliegos. Este proceso permite ajustar el presupuesto asignado a diferentes partidas o secciones dentro de la entidad pública para responder a necesidades cambiantes o nuevas prioridades durante el ejercicio fiscal."
+	},
+	{
+		"question": "¿Qué son las transferencias financieras entre Pliegos?",
+		"answer": "Las transferencias financieras entre pliegos son traspasos de fondos públicos sin contraprestación, destinados a la ejecución de actividades y proyectos de los presupuestos institucionales respectivos de los pliegos de destino. Estos traspasos permiten la asignación de recursos a diferentes entidades o áreas dentro del sector público para financiar proyectos específicos o cubrir necesidades presupuestarias."
+	},
+	{
+		"question": "¿Qué es el valor residual de un activo?",
+		"answer": "El valor residual de un activo es el valor estimado que se espera obtener al final de su vida útil, después de deducir la depreciación acumulada. Este valor representa el monto que se puede recuperar al vender o desechar el activo una vez que ha sido totalmente depreciado. El valor residual es importante para calcular la depreciación y evaluar la eficiencia de la inversión en activos fijos."
+	},
+	{
+		"question": "¿Cuál es el objetivo del proceso de transición al Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "El objetivo es establecer lineamientos generales para la transición al Marco de las Normas Internacionales de Contabilidad del Sector Público en las entidades del sector público. Esto permitirá la generación de información financiera y presupuestaria que contribuya a la rendición de cuentas y la toma de decisiones, promoviendo la transparencia pública."
+	},
+	{
+		"question": "¿Qué leyes y decretos conforman la base legal para la transición al Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "La base legal para la transición incluye las siguientes normas:\n\n  a) Ley N° 27269, Ley de Firmas y Certificados Digitales.\n  b) Ley N° 27658, Ley Marco de Modernización de la Gestión del Estado.\n  c) Ley N° 29158, Ley Orgánica del Poder Ejecutivo.\n  d) Ley N° 31912, Ley que aprueba créditos suplementarios para el financiamiento de mayores gastos asociados a la reactivación económica, la respuesta ante la emergencia y el peligro inminente por la ocurrencia del Fenómeno El Niño para el año 2023 y dicta otras medidas.\n  e) Decreto Legislativo N° 1436, Decreto Legislativo Marco de la Administración Financiera del Sector Público.\n  f) Decreto Supremo N° 052-2008-PCM, Decreto Supremo que aprueba el Reglamento de la Ley de Firmas y Certificados Digitales.\n  g) Decreto Supremo Nº 026-2016-PCM, Decreto Supremo que aprueba medidas para el fortalecimiento de la infraestructura oficial de firma electrónica y la implementación progresiva de la firma digital en el Sector Público y Privado.\n  h) Decreto Supremo N° 004-2019-JUS, Decreto Supremo que aprueba el Texto Único Ordenado de la Ley N° 27444, Ley del Procedimiento Administrativo General.\n  i) Decreto Supremo N° 057-2022-EF, Decreto Supremo que aprueba el Texto Único Ordenado del Decreto Legislativo N° 1438, Decreto Legislativo del Sistema Nacional de Contabilidad.\n  j) Resolución Ministerial N° 331-2023-EF/41, que aprueba el Texto Integrado Actualizado del Reglamento de Organización y Funciones del Ministerio de Economía y Finanzas.\n  k) Resolución Directoral N° 013-2023-EF/51.01, que aprueba la aplicación de las Normas Internacionales de Contabilidad del Sector Público de acumulación o devengo, el Prólogo a las NICSP y Marco Conceptual de la Edición 2022.\n\nEstas normas incluyen sus respectivas disposiciones ampliatorias, modificatorias y conexas, de ser el caso."
+	},
+	{
+		"question": "¿A qué entidades se aplica la Directiva sobre el Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "La Directiva es aplicable a las entidades del sector público, incluyendo Poderes Legislativo, Ejecutivo y Judicial, el Ministerio Público, Jurado Nacional de Elecciones, Oficina Nacional de Procesos Electorales, Registro Nacional de Identificación y Estado Civil, Junta Nacional de Justicia, Defensoría del Pueblo, Tribunal Constitucional, Contraloría General de la República, Superintendencia de Banca, Seguros y Administradoras Privadas de Fondos de Pensiones, Universidades Públicas, Gobiernos Regionales y Locales, organismos públicos de los niveles regional y local, y otras formas organizativas no financieras que administren recursos públicos como ESSALUD."
+	},
+	{
+		"question": "¿Qué es una entidad adoptante según la Directiva sobre el Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "Una entidad adoptante es aquella que, bajo el alcance de esta Directiva, adopta el Marco NICSP por primera vez y debe presentar sus estados financieros de transición conforme al Marco NICSP a la Dirección General de Contabilidad Pública (DGCP)."
+	},
+	{
+		"question": "¿Qué incluyen las Normas de Transición de la Directiva sobre el Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "Las Normas de Transición incluyen la presente Directiva y otras normas que la DGCP aprueba para su uso en la transición al Marco NICSP."
+	},
+	{
+		"question": "¿Qué significa DGCP en el contexto de la Directiva sobre el Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "DGCP significa Dirección General de Contabilidad Pública."
+	},
+	{
+		"question": "¿Qué son las NICSP según la Directiva sobre el Marco de las Normas Internacionales de Contabilidad del Sector Público?",
+		"answer": "NICSP significa Normas Internacionales de Contabilidad del Sector Público."
+	},
+	{
+		"question": "¿Qué es el Marco NICSP?",
+		"answer": "El Marco NICSP es el marco para la preparación de la información financiera aplicable a partir del 1 de enero de 2024, que comprende las NICSP de acumulación (o devengo), el Prólogo a las NICSP y el Marco Conceptual, en su versión en español, así como otras disposiciones para su aplicación."
+	},
+	{
+		"question": "¿Cuándo inicia el periodo de transición al Marco NICSP?",
+		"answer": "El periodo de transición inicia el 1 de enero de 2024."
+	},
+	{
+		"question": "¿Cuál es la duración máxima del periodo de transición al Marco NICSP?",
+		"answer": "El periodo de transición al Marco NICSP comprende un máximo de tres años desde la fecha de adopción."
+	},
+	{
+		"question": "¿Qué deben hacer las entidades adoptantes durante la transición al Marco NICSP?",
+		"answer": "Las entidades adoptantes deben preparar un diagnóstico de brechas contables y presentar información financiera e información presupuestaria de los periodos intermedios y de cierre de cada ejercicio fiscal, según lo dispuesto en los instructivos de la DGCP."
+	},
+	{
+		"question": "¿Quién es responsable de la transición al Marco NICSP en una entidad adoptante?",
+		"answer": "El titular de la entidad adoptante es la autoridad responsable de la transición al Marco NICSP."
+	},
+	{
+		"question": "¿Qué deben proporcionar las jefaturas de áreas competentes en una entidad adoptante?",
+		"answer": "Deben proporcionar la información sobre transacciones y otros hechos económicos para el registro contable, así como participar en las comisiones o equipos de trabajo para la transición."
+	},
+	{
+		"question": "¿Qué responsabilidades tienen las jefaturas de las Oficinas de Contabilidad durante la transición?",
+		"answer": "Son responsables de ejecutar el proceso contable y llevar a cabo las acciones necesarias para el reconocimiento, medición y presentación de las transacciones y otros hechos económicos."
+	},
+	{
+		"question": "¿Qué implica la presentación de información y documentos a la DGCP por parte de las entidades adoptantes?",
+		"answer": "No implica la convalidación o aprobación de los actos de gestión realizados por los funcionarios de las entidades adoptantes."
+	},
+	{
+		"question": "¿Puede la DGCP solicitar información adicional a las entidades adoptantes?",
+		"answer": "Sí, la DGCP puede solicitar información adicional si es necesario, a pesar del cumplimiento de las entidades respecto a las Normas de Transición."
+	},
+	{
+		"question": "¿Qué puede disponer la DGCP en relación con las adecuaciones informáticas durante la transición?",
+		"answer": "La DGCP puede disponer la implementación progresiva de adecuaciones informáticas necesarias para contar con la información financiera y presupuestaria en el contexto de la transición al Marco NICSP."
+	},
+	{
+        "question": "¿Cuál es el objetivo de la transición al Marco NICSP?",
+        "answer": "La transición al Marco NICSP tiene como objetivo que las entidades adoptantes apliquen el Marco NICSP a partir del 1 de enero de 2024, con un período de transición que se extiende hasta el 31 de diciembre de 2026."
+    },
+    {
+        "question": "¿Qué es una entidad adoptante en el contexto de la transición al Marco NICSP?",
+        "answer": "Una entidad adoptante es aquella que aplica el Marco NICSP por primera vez y que debe presentar sus estados financieros de transición conforme al Marco NICSP. La condición de entidad adoptante se mantiene desde la fecha de adopción hasta el fin del período de transición."
+    },
+    {
+        "question": "¿Cómo se agrupan las acciones necesarias para llevar a cabo la transición al Marco NICSP?",
+        "answer": "Las acciones se agrupan en las etapas de planificación, ejecución, culminación y seguimiento, siendo el seguimiento una acción transversal a todo el proceso de transición."
+    },
+    {
+        "question": "¿Qué acciones se incluyen en la etapa de planificación de la transición al Marco NICSP?",
+        "answer": "La planificación incluye establecer las metas de transición y cómo se espera lograrlas, evidenciado en el Programa de Transición."
+    },
+    {
+        "question": "¿Qué implica la ejecución en el proceso de transición al Marco NICSP?",
+        "answer": "La ejecución implica llevar a cabo las acciones planificadas y preparar los soportes documentarios en los plazos establecidos en el Programa de Transición."
+    },
+    {
+        "question": "¿Qué se entiende por culminación en la transición al Marco NICSP?",
+        "answer": "La culminación es el resultado final del proceso, cuando la entidad ha completado la ejecución del Programa de Transición."
+    },
+    {
+        "question": "¿Cuál es la función del seguimiento en la transición al Marco NICSP?",
+        "answer": "El seguimiento permite verificar el progreso de la transición y asegurar que las acciones se ejecuten según el Programa de Transición."
+    },
+    {
+        "question": "¿Quién es responsable de aprobar la conformación de una Comisión Especial de Transición (CET)?",
+        "answer": "El titular de la entidad adoptante aprueba la conformación de la CET mediante resolución."
+    },
+    {
+        "question": "¿Qué funciones tiene la CET en el proceso de transición al Marco NICSP?",
+        "answer": "La CET organiza y dispone los equipos de trabajo, recursos, plazos internos, y otras acciones necesarias para llevar a cabo la transición al Marco NICSP."
+    },
+    {
+        "question": "¿Qué debe incluir el Programa de Transición aprobado por la CET?",
+        "answer": "El Programa de Transición debe incluir las metas y acciones para la transición, detallando cómo se logrará cada meta."
+    }
 ]
