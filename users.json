@@ -1,0 +1,10 @@
+{
+    "admin": {
+        "password": "clave1",
+        "dashboardLink": "https://app.powerbi.com/view?r=eyJrIjoiMjA3NTZmOWUtMTA3Mi00NTljLWIwMjEtZjJjMTZkNTg1YzQwIiwidCI6IjBhM2M2YTBlLTllNmItNDg2Ny04YjkzLTM0NzAyNTE1YTdkYiIsImMiOjR9"
+    },
+    "usuario2": {
+        "password": "clave2",
+        "dashboardLink": "https://app.powerbi.com/view?r=eyJrIjoiMTI3OTdmOWItNzUyNi00NzY5LWE2ZjAtNGFiMzM3NzZlZmM4IiwidCI6IjBhM2M2YTBlLTllNmItNDg2Ny04YjkzLTM0NzAyNTE1YTdkYiIsImMiOjR9"
+    }
+}
