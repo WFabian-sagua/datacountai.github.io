@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Asistente Virtual Fabian</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que este archivo CSS esté correctamente enlazado -->
 </head>
 <body>
     <div class="chat-container">
@@ -13,25 +13,21 @@
         <div class="header">
             <div class="header-content">
                 <span class="header-title">FabianBot</span>
-                <i class="fas fa-robot"></i>
+                <div class="infinite-animation"></div>
             </div>
         </div>
 
         <div class="chat-box" id="chat-box">
-            <!-- Mensajes del chat -->
-            <div class="message received">¡Hola! Soy FabianBot, tu Asistente Virtual. Bienvenido al chat bot promocionado por Data Count AI y desarrollado por Fabian Sagua. Mi propósito es guiarte en el fascinante mundo de la ciencia de datos y contabilidad para el sector público en Perú.</div>
+		<div class="message received">¡Hola! Soy el asistente virtual de Data Count Ai. ¿Cómo puedo ayudarte hoy? Escribe "ayuda" o "menú" para ver las opciones disponibles.</div>
         </div>
+
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Envía un mensaje a FabianBot...">
             <button id="send-btn"><i class="fas fa-arrow-up"></i></button>
         </div>
     </div>
-
-    <!-- Mensaje en la parte baja de la pantalla -->
-    <div class="disclaimer">
-        FabianBot, tu compañero virtual para simplificar tu día a día
-    </div>
-
+	
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
     <script src="chat.js"></script>
 </body>
 </html>
