@@ -1,1 +1,298 @@
-.background-animation,body{background:#fff;overflow:hidden}.wrapper,body{overflow:hidden}.container,body{box-sizing:border-box}body,h1{color:#333}body{font-family:Arial,sans-serif;margin:0;padding:0;position:relative}.background-animation{position:fixed;bottom:0;left:0;width:100%;height:150px;z-index:-1}.waves{position:absolute;bottom:0;left:0;width:100%;height:100%}.container,.wrapper{position:relative;width:100%}@keyframes move-forever{0%{transform:translate3d(-90px,0,0)}100%{transform:translate3d(85px,0,0)}}@keyframes wave-color-change{0%{fill:rgba(173,216,230,0.7)}33%{fill:rgba(135,206,235,0.7)}66%{fill:rgba(70,130,180,0.7)}100%{fill:rgba(65,105,225,0.7)}}.parallax>use{animation:25s cubic-bezier(.55,.5,.45,.5) infinite move-forever,12s linear infinite wave-color-change}.parallax>use:first-child{animation-delay:-2s;animation-duration:7s}.parallax>use:nth-child(2){animation-delay:-3s;animation-duration:10s}.parallax>use:nth-child(3){animation-delay:-4s;animation-duration:13s}.parallax>use:nth-child(4){animation-delay:-5s;animation-duration:20s}.wrapper{display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,.1))}.container{background:rgba(255,255,255,.9);border-radius:15px;box-shadow:0 6px 25px rgba(0,0,0,.2);padding:30px;text-align:center;max-width:400px;overflow-y:auto;max-height:80vh}.logo img{max-width:180px;margin-bottom:20px;animation:1s ease-in-out slideIn}.binary-animation-inside{position:absolute;top:70px;left:0;width:100%;height:80px;overflow:hidden;z-index:-1}.binary-animation-inside span{position:absolute;font-size:30px;color:#000;animation:linear infinite fall;opacity:.9}@keyframes fall{0%{top:-10%;opacity:.8}100%{top:110%;opacity:0}}p.welcome-message{font-size:12px;color:#777;margin-bottom:20px;font-weight:400}h1{font-size:24px;margin-bottom:10px}form{display:flex;flex-direction:column;gap:15px;margin-bottom:25px}input[type=password],input[type=text]{padding:12px;border:1px solid #ddd;border-radius:10px;font-size:16px;transition:border-color .3s}input[type=password]:focus,input[type=text]:focus{border-color:#0073e6;outline:0}button{padding:12px;border:none;border-radius:10px;background-color:#0073e6;color:#fff;font-size:16px;cursor:pointer;transition:background-color .3s,transform .3s}button:hover{background-color:#005bb5;transform:scale(1.05)}#login-message{color:red;font-size:14px;margin-top:10px}.button-row,.icon-row{display:flex;justify-content:center;gap:10px;margin-top:20px}.icon,.link{display:inline-block;width:40px;height:40px;border-radius:50%;color:#fff;text-align:center;line-height:40px;font-size:20px;transition:background-color .3s,transform .3s,box-shadow .3s;box-shadow:0 3px 6px rgba(0,0,0,.2)}.icon.facebook{background-color:#4267b2}.icon.whatsapp{background-color:#25d366}.icon.instagram{background-color:#c13584}.icon:hover,.link:hover{transform:scale(1.05);box-shadow:0 4px 8px rgba(0,0,0,.3)}.link.telegram{background-color:#08c}.link.website{background-color:#0073e6}.link.tiktok{background-color:#000}.link.youtube{background-color:red}.link.email{background-color:#d44638}.footer{font-size:12px;color:#777;margin-top:30px}.footer a{color:#0073e6;text-decoration:none}.footer a:hover{text-decoration:underline}.footer p{margin:0;line-height:1.5}
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #ffffff; /* Fondo blanco para todo el body */
+    position: relative;
+    overflow: hidden;
+}
+
+.background-animation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: -1;
+    background: #ffffff; /* Fondo blanco para la animación */
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes wave-color-change {
+    0% {
+        fill: rgba(173, 216, 230, 0.7); /* Azul claro */
+    }
+    33% {
+        fill: rgba(135, 206, 235, 0.7); /* Azul cielo */
+    }
+    66% {
+        fill: rgba(70, 130, 180, 0.7); /* Azul acero */
+    }
+    100% {
+        fill: rgba(65, 105, 225, 0.7); /* Azul royal */
+    }
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite, wave-color-change 12s linear infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.1)); /* Gradiente muy sutil */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 180px;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.binary-animation-inside {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.binary-animation-inside span {
+    position: absolute;
+    font-size: 30px;
+    color: #000;
+    animation: fall linear infinite;
+    opacity: 0.9;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 0.8;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+p.welcome-message {
+    font-size: 12px; /* Tamaño de fuente más pequeño para el texto secundario */
+    color: #777; /* Color gris claro */
+    margin-bottom: 20px; /* Espacio inferior para separar del formulario */
+    font-weight: 400; /* Fuente normal para el texto secundario */
+}
+
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+#login-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reducido el espacio entre íconos */
+    margin-top: 20px;
+}
+
+.icon {
+    display: inline-block;
+    width: 40px; /* Tamaño reducido del ícono */
+    height: 40px; /* Tamaño reducido del ícono */
+    border-radius: 50%;
+    color: #ffffff; /* Color blanco para los íconos */
+    text-align: center;
+    line-height: 40px; /* Ajuste al tamaño reducido */
+    font-size: 20px; /* Tamaño de fuente reducido */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
+}
+
+.icon.facebook {
+    background-color: #4267B2; /* Azul de Facebook */
+}
+
+.icon.whatsapp {
+    background-color: #25D366; /* Verde de WhatsApp */
+}
+
+.icon.instagram {
+    background-color: #C13584; /* Rosa de Instagram */
+}
+
+.icon:hover {
+    transform: scale(1.05); /* Tamaño del ícono en hover ajustado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ajustada en hover */
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reducido el espacio entre botones */
+    margin-top: 20px;
+}
+
+.link {
+    display: inline-block;
+    width: 40px; /* Tamaño reducido del botón */
+    height: 40px; /* Tamaño reducido del botón */
+    border-radius: 50%;
+    color: #ffffff; /* Color blanco para los íconos */
+    text-align: center;
+    line-height: 40px; /* Ajuste al tamaño reducido */
+    font-size: 20px; /* Tamaño de fuente reducido */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
+}
+
+.link.telegram {
+    background-color: #0088cc; /* Azul de Telegram */
+}
+
+.link.website {
+    background-color: #0073e6; /* Azul para el sitio web */
+}
+
+.link.tiktok {
+    background-color: #000000; /* Negro de TikTok */
+}
+
+.link.youtube {
+    background-color: #FF0000; /* Rojo de YouTube */
+}
+
+.link.email {
+    background-color: #D44638; /* Rojo oscuro de Gmail */
+}
+
+.link:hover {
+    transform: scale(1.05); /* Tamaño del botón en hover ajustado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ajustada en hover */
+}
+
+
+.footer {
+    font-size: 12px;
+    color: #777; /* Color gris para el texto */
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #0073e6; /* Color del enlace en el footer */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+.footer p {
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+    line-height: 1.5; /* Aumenta la altura de línea para mejor legibilidad */
+}
